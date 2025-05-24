@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<canvas id='banner' style="border:1px solid gray;width:500px;height:300px"></canvas>
+<script type="text/javascript">
+	var can=document.getElementById('banner');
+	var ctx=can.getContext('2d');
+	//set LinearGradient
+	var grd=ctx.createLinearGradient(10,20,200,100);
+	grd.addColorStop(0,'red');
+	grd.addColorStop(0.3,'yellow');
+	grd.addColorStop(0.6,'pink');
+	grd.addColorStop(1,'blue');
+	//Add Text
+	ctx.font='30px Arial';
+	ctx.fillStyle=grd;
+	ctx.fillText('Welcome User',30,40);
+	//ctx.fillRect(0,0,500,300);
+	
+
+</script>
+</body>
+</html>

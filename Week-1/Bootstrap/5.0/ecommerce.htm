@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Full Product Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .product-img {
+            height: 400px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+        }
+
+        .price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #28a745;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">ShopName</a>
+        </div>
+    </nav>
+
+    <!-- Product Section -->
+    <div class="container my-5">
+        <div class="row g-5">
+            <!-- Image Carousel -->
+            <div class="col-md-6">
+                <div id="productCarousel" class="carousel slide shadow" data-bs-ride="carousel">
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <img src="https://via.placeholder.com/600x400" class="d-block w-100 product-img"
+                                alt="Product 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://via.placeholder.com/600x400/cccccc" class="d-block w-100 product-img"
+                                alt="Product 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://via.placeholder.com/600x400/999999" class="d-block w-100 product-img"
+                                alt="Product 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="col-md-6">
+                <h2>Premium Wireless Headphones</h2>
+                <p class="price">$129.99</p>
+                <p>Experience immersive sound with top-tier noise cancellation. Ideal for work, travel, and everyday
+                    use.</p>
+                <div class="mb-3">
+                    <label for="quantity" class="form-label">Quantity</label>
+                    <input type="number" id="quantity" class="form-control w-25" value="1" min="1">
+                </div>
+                <button class="btn btn-success btn-lg">
+                    <i class="bi bi-cart-plus me-2"></i>Add to Cart
+                </button>
+
+                <hr>
+                <h6>Features:</h6>
+                <ul>
+                    <li>Bluetooth 5.0</li>
+                    <li>30-hour battery life</li>
+                    <li>Active Noise Cancellation</li>
+                    <li>1-year warranty</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reviews Section -->
+    <div class="container mb-5">
+        <h4 class="mb-3">Customer Reviews</h4>
+        <div class="border p-3 rounded mb-3">
+            <strong>Jane Doe</strong> <span class="text-warning">★★★★★</span>
+            <p class="mb-0">Amazing sound quality and comfort. Worth every penny!</p>
+        </div>
+        <div class="border p-3 rounded mb-3">
+            <strong>Michael Smith</strong> <span class="text-warning">★★★★☆</span>
+            <p class="mb-0">Great battery life. Slightly tight fit, but overall solid.</p>
+        </div>
+    </div>
+
+    <!-- Related Products -->
+    <div class="container mb-5">
+        <h4 class="mb-4">Related Products</h4>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Related 1">
+                    <div class="card-body">
+                        <h6 class="card-title">Wireless Earbuds</h6>
+                        <p class="card-text text-success">$59.99</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Related 2">
+                    <div class="card-body">
+                        <h6 class="card-title">Portable Speaker</h6>
+                        <p class="card-text text-success">$89.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Related 3">
+                    <div class="card-body">
+                        <h6 class="card-title">Noise Cancelling Earphones</h6>
+                        <p class="card-text text-success">$99.99</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Related 4">
+                    <div class="card-body">
+                        <h6 class="card-title">Charging Dock</h6>
+                        <p class="card-text text-success">$25.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-3">
+        <small>© 2025 ShopName. All rights reserved.</small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

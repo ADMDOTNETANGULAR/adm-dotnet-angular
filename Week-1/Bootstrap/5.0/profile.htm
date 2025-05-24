@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profile Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">MyApp</a>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <div class="container py-5">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-4 text-center mb-4">
+                <img src="https://via.placeholder.com/120" alt="User Avatar" class="profile-img mb-3" />
+                <h4>John Doe</h4>
+                <p class="text-muted">Web Developer</p>
+                <button class="btn btn-outline-primary btn-sm">Edit Profile</button>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-8">
+                <!-- Tabs -->
+                <ul class="nav nav-tabs mb-3" id="profileTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#overview"
+                            type="button">Overview</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#activity"
+                            type="button">Activity</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#settings"
+                            type="button">Settings</button>
+                    </li>
+                </ul>
+
+                <!-- Tab Content -->
+                <div class="tab-content">
+                    <!-- Overview Tab -->
+                    <div class="tab-pane fade show active" id="overview">
+                        <h5>Profile Information</h5>
+                        <table class="table">
+                            <tr>
+                                <th>Email:</th>
+                                <td>john@example.com</td>
+                            </tr>
+                            <tr>
+                                <th>Phone:</th>
+                                <td>+1 234 567 890</td>
+                            </tr>
+                            <tr>
+                                <th>Location:</th>
+                                <td>New York, USA</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- Activity Tab -->
+                    <div class="tab-pane fade" id="activity">
+                        <h5>Recent Activity</h5>
+                        <ul class="list-group">
+                            <li class="list-group-item">Logged in from Chrome</li>
+                            <li class="list-group-item">Updated profile picture</li>
+                            <li class="list-group-item">Changed password</li>
+                        </ul>
+                    </div>
+
+                    <!-- Settings Tab -->
+                    <div class="tab-pane fade" id="settings">
+                        <h5>Account Settings</h5>
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" value="John Doe" />
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" value="john@example.com" />
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Password</label>
+                                <input type="password" class="form-control" placeholder="Enter new password" />
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-3">
+        <small>© 2025 MyApp</small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

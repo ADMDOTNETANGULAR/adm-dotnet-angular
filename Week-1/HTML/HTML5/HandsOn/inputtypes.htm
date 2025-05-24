@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <script>
+        function f() {
+            //alert('hi');
+            let v = document.getElementById('s').value;
+            document.getElementById('s1').style.fontSize = parseInt(v) + 'px'
+        }
+    </script>
+</head>
+
+<body>
+    <form action="">
+        <table border="1">
+            <tr>
+                <td><label>Color</label></td>
+                <td><input type="color" name="" id=""></td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td><input type="date" name="" id=""></td>
+            </tr>
+            <tr>
+                <td>Number</td>
+                <td>
+                    <input type="number" name="" id="">
+                </td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td>
+                    <input type="number" name="" max="35" min="12">
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input type="email" name="" id="">
+                </td>
+            </tr>
+            <tr>
+                <td>Slider</td>
+                <td><input type="range" name="" id="s" max=100 min=10 value="0" onchange="f()"></td>
+            </tr>
+
+            <tr>
+                <td>Search</td>
+                <td>
+                    <input type="search" name="" id="">
+                </td>
+            </tr>
+            <tr>
+                <td>URL</td>
+                <td><input type="url" name="" id=""></td>
+            </tr>
+
+            <tr>
+                <td>Week</td>
+                <td>
+                    <input type="week" name="" id="">
+                </td>
+            </tr>
+            <tr>
+                <td>Month</td>
+                <td>
+                    <input type="month" name="" id="">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Submit">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <span id='s1' style="font-size: 10px;">sample text</span>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

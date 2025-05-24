@@ -1,0 +1,74 @@
+<html>
+        <head>
+            <title>Register</title>
+        </head>
+        <body>
+            <form action="" method="POST">
+                <fieldset style="width:300px">
+                    <legend>Register Here...</legend>
+                    <table>
+                            <tr>
+                                    <td>ID *</td>
+                                   <td><input type="text"  id="txtid" required pattern="S[0-9]{3}" title="ID starts with S follwed by 3 digits"></td>
+                                </tr>
+                                <tr>
+                        <tr>
+                            <td>Name *</td>
+                           <td><input type="text"  id="txtname" required pattern="[A-Z]+" title="Name Should be in Upper Case"></td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td>
+                                <input type="radio" name="gender">Male &nbsp;
+                                <input type="radio" name="gender" id="">Female
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td><input type="email"  id="txtemail"></td>
+                        </tr>
+                        <tr>
+                            <td>Mobile</td>
+                            <td><input type="text"  id="txtmobile" pattern="[6789]{1}[0-9]{9}" title="Invalid Mobile no"></td>
+                        </tr>
+                        <tr>
+                            <td>Country</td>
+                            <td>
+                                <select name="" id="">
+                                    <option value="">India</option>
+                                    <option value="">China</option>
+                                    <option value="">Japan</option>
+                                    <option value="">USA</option>
+                                    <option value="">UK</option>
+                                    <option value="">France</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Login Details</td>
+                        </tr>
+                        <tr>
+                            <td>Username *</td>
+                            <td>
+                                <input type="text"  id="txtuname" pattern="[0-9a-zA-Z]{3,8}" required title="Enter only Alphanumerics">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Password *</td>
+                            <td>
+                                <input type="password"  id="txtpwd" pattern="[A-Za-z0-9]{5}[!@#$%]{1}" required title="Invalid Password Format">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value="SignUp">
+                            </td>
+                            <td>
+                                <input type="reset" value="Reset">
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </body>
+    </html>

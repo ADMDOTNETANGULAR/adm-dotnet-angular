@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+            <div style="border:1px solid gray;width:400px;height:400px">
+                    <canvas id="canvas1">
+                            
+                                </canvas>
+            </div>
+    </body>
+    <script>
+    var obj=document.getElementById('canvas1');
+    //get 2d object
+    var ctxobj=obj.getContext('2d');
+        ctxobj.font="30px Arial";
+        ctxobj.fillStyle="blue";
+        ctxobj.shadowBlur="10";
+        ctxobj.shadowColor="red";
+       ctxobj.fillText('Hello World',30,50);
+       //ctxobj.strokeText("Good Morning",100,100);
+    </script>
+</html>

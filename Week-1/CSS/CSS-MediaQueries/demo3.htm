@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Queries Demo</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      font-size: 16px;
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+      transition: all 0.3s ease;
+    }
+
+    header {
+      padding: 1rem;
+      background-color: #222;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      padding: 1rem;
+    }
+
+    .sidebar {
+      width: 200px;
+      background-color: #f0f0f0;
+      padding: 1rem;
+    }
+
+    .main {
+      flex: 1;
+      padding: 1rem;
+    }
+
+    img.responsive {
+      width: 100%;
+      height: auto;
+      max-width: 400px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .grid div {
+      background-color: #ddd;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    /* Tablet (768px) */
+    @media (max-width: 768px) {
+      body {
+        font-size: 18px;
+      }
+
+      .container {
+        flex-direction: column;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Mobile (600px) */
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+      }
+
+      .sidebar {
+        display: none;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Dark mode */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #121212;
+        color: #eee;
+      }
+
+      .sidebar,
+      .main,
+      .grid div {
+        background-color: #333;
+        color: white;
+      }
+    }
+
+    /* Portrait vs Landscape */
+    @media (orientation: portrait) {
+      header {
+        background-color: steelblue;
+      }
+    }
+
+    @media (orientation: landscape) {
+      header {
+        background-color: darkslategray;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Responsive Design with Media Queries</h1>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Sidebar</h2>
+      <p>This sidebar hides on mobile screens.</p>
+    </aside>
+
+    <main class="main">
+      <h2>Main Content</h2>
+      <p>Resize the window or change orientation to see effects.</p>
+
+      <img src="https://via.placeholder.com/400x200" class="responsive" alt="Responsive Image">
+
+      <div class="grid">
+        <div>Box 1</div>
+        <div>Box 2</div>
+        <div>Box 3</div>
+        <div>Box 4</div>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

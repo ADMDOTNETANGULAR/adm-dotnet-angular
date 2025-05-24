@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .two-column {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .two-column>div {
+            flex: 1 1 100%;
+            background: #eee;
+            padding: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .two-column>div {
+                flex: 1 1 48%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="two-column">
+        <div>Column 1</div>
+        <div>Column 2</div>
+    </div>
+</body>
+
+</html>
+<!-- Two-Column Layout (Stack on Mobile) -->

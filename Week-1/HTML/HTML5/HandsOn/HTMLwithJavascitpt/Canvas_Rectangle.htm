@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <div style="border:1px solid gray;width:400px;height:400px">
+            <canvas id="canvas1">
+                    
+                        </canvas>
+    </div>
+    
+    <script>
+    var canvas=document.getElementById("canvas1");
+    var ctxobj=canvas.getContext('2d');//returns 2d object
+    ctxobj.fillStyle="blue"; //fill color
+    ctxobj.shadowBlur="30";
+    ctxobj.shadowColor="black";
+    ctxobj.fillRect(30,40,300,400)
+    </script>
+    </body>
+</html>

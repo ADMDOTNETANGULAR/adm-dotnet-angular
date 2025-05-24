@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav {
+            background: #333;
+            padding: 1rem;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .menu {
+            display: flex;
+        }
+
+        @media (max-width: 600px) {
+            .menu {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            nav a {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">MySite</div>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+</body>
+
+</html>
+<!-- Responsive Navigation Bar -->

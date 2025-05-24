@@ -1,0 +1,22 @@
+body
+{
+    background-color: darkgoldenrod;
+}
+.control
+{
+    width: 300px;
+    height: 40px;
+    background-color: yellow;
+    color: saddlebrown;
+}
+.btncontrol
+{
+    width: 100px;
+    height: 40px;
+    background-color:maroon;
+    color: white
+}
+.chx
+{
+    width: 40px;
+}

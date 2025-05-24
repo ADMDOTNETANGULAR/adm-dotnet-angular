@@ -1,0 +1,33 @@
+<!-- Example 2: Hide Sidebar on Small Screens -->
+<!-- Explanation: Hides the .sidebar on screens 600px or smaller. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sidebar {
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            .sidebar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Responsive Design Example</h1>
+    <p>This is an example of a responsive design using media queries.</p>
+    <div class="sidebar">
+        <p>This sidebar will be hidden on small screens.</p>
+    </div>
+    <p>Resize the window to see the effect.</p>
+    <p>Try it on different devices!</p>
+</body>
+
+</html>

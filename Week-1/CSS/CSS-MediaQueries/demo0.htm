@@ -1,0 +1,38 @@
+<!-- Example 1: Mobile First (Adjust Font Size) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 30px;
+            background-color: red;
+        }
+
+        @media (min-width: 720px) {
+            body {
+                font-size: 12px;
+                background-color: blue;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            body {
+                font-size: 20px;
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Responsive Font Size</h1>
+    <p>This is an example of a responsive font size using media queries.</p>
+    <p>Resize the window to see the effect.</p>
+    <p>Try it on different devices!</p>
+</body>
+
+</html>

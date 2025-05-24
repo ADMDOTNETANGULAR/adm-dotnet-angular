@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            min-height: 100vh;
+            background-color: #f8f9fa;
+            padding-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- Sidebar -->
+            <nav class="col-md-2 d-none d-md-block sidebar">
+                <div class="position-sticky">
+                    <h5 class="text-center">Dashboard</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Overview</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Reports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Analytics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Settings</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="col-md-10 ms-sm-auto px-md-4">
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light mt-2 mb-4">
+                    <div class="container-fluid">
+                        <span class="navbar-brand mb-0 h1">Welcome, Admin</span>
+                    </div>
+                </nav>
+
+                <!-- Dashboard Widgets -->
+                <div class="row g-4 mb-4">
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Users</h5>
+                                <p class="card-text display-6">1,250</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Sales</h5>
+                                <p class="card-text display-6">$34,000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Visitors</h5>
+                                <p class="card-text display-6">8,390</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Conversions</h5>
+                                <p class="card-text display-6">4.8%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example Table -->
+                <div class="card shadow-sm mb-5">
+                    <div class="card-body">
+                        <h5 class="card-title">Recent Activity</h5>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>User</th>
+                                    <th>Action</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>May 21</td>
+                                    <td>Jane Doe</td>
+                                    <td>Logged In</td>
+                                    <td><span class="badge bg-success">Success</span></td>
+                                </tr>
+                                <tr>
+                                    <td>May 20</td>
+                                    <td>John Smith</td>
+                                    <td>Payment</td>
+                                    <td><span class="badge bg-warning">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>May 19</td>
+                                    <td>Alice Brown</td>
+                                    <td>Sign Up</td>
+                                    <td><span class="badge bg-info">Info</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+</head>
+
+<body>
+	<div id='result'></div>
+	<input type="text" id='t1'>
+	<input type="button" onclick="f()" value="Click">
+	<script type="text/javascript">
+		function f() {
+			let un = document.getElementById('t1').value;
+			//set value
+			localStorage.setItem('uname', un);
+			//get value
+			var uname = localStorage.getItem('uname');
+			document.getElementById('result').innerHTML = 'Good Morning ' + uname;
+		}
+	</script>
+</body>
+
+</html>

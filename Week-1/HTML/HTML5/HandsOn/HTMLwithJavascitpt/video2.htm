@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <span>Select Video</span><input type="text" id="t1" list="source"> <button onclick="Load()">Load</button>
+    <datalist id="source">
+        <option value="mov_bbb.mp4"></option>
+        <option value="v1.mp4"></option>
+        <option value="v2.mp4"></option>
+        <option value="v3.mp4"></option>
+    </datalist><br><br>
+    <button onclick="Play()">Play</button>
+    <button onclick="Pause()">Pause</button>
+    <button onclick="Small()">Small</button>
+    <button onclick="Big()">Big</button>
+    <button onclick="Mute()">Mute</button>
+    <input type="range"  id="r1" max="1" min="0" step="0.1" onchange="SetVol()"><br><br>
+    <video width="300" height="300" controls id="video1">
+        <source src="mov_bbb.mp4" type="video/mp4">
+    </video>
+    <script>
+        var objvideo=document.getElementById('video1');
+    function Play() {
+        objvideo.play(); //play the video file
+    }
+    function Pause() {
+        objvideo.pause();//pause the video file
+    }
+    function Big() {
+        objvideo.width="500";
+    }
+    function Small() {
+        objvideo.width="300";
+    }
+    function Mute() {
+        if(objvideo.muted==true)
+        {
+            objvideo.muted=false;
+        }
+        else if(objvideo.muted==false)
+        {
+            objvideo.muted=true;
+        }
+    }
+    function SetVol() {
+        var vol=document.getElementById('r1').value;
+        objvideo.volume=vol;
+    }
+    function Load() {
+        var source=document.getElementById('t1').value;
+        objvideo.src=source;
+        objvideo.load();
+        objvideo.play();
+    }
+    </script>
+    </body>
+</html>

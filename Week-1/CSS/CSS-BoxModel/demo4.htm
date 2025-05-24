@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--  Example 1: Margin Collapsing -->
+<!-- The vertical margins between .box elements collapse. 
+So instead of 20px + 20px = 40px, 
+the space between boxes is just 20px. -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 100px;
+            margin: 20px 0;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">This is a box</div>
+    <div class="box">This is another box</div>
+</body>
+
+</html>
