@@ -13,4 +13,3 @@ let numbers=[
     56
 ];
 let marks=new Array(56,56,78,89,90);
-let isAvalable=true;

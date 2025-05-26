@@ -1,32 +1,25 @@
-class Employee
-{
-constructor(eid,ename,desig,sal)
-{
-    this.Eid=eid;
-    this.Ename=ename;
-    this.Desig=desig;
-    this.Salary=sal;
+// Parent class
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    console.log(`${this.name} makes a noise.`);
+  }
 }
 
+// Child class inherits from Animal
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name); // call the parent constructor
+    this.breed = breed;
+  }
+
+  speak() {
+    console.log(`${this.name} barks.`);
+  }
 }
-class Manager extends Employee
-{
-    constructor(eid,ename,desig,sal,project)
-    {
-    super(eid,ename,desig,sal);
-       this.Project=project;
-      
-    }
-    details()
-    {
-        console.log("Eid "+this.Eid);
-        console.log("Ename "+this.Ename);
-        console.log("Designation "+this.Desig)
-       console.log("Project "+this.Project);
-        console.log("Salary "+this.Salary);
-    }
-    
-   
-}
-var obj=new Manager(100,'Suren','TeamLeader',45000,'BFS');
-obj.details();
+
+const dog = new Dog('Rex', 'Labrador');
+dog.speak(); // Rex barks.

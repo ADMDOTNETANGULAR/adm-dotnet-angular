@@ -1,20 +1,27 @@
-class Person {
-    constructor(name) {
-        this.Name = name;
+class Employee {
+    constructor(eid, ename, desig, sal) {
+        this.Eid = eid;
+        this.Ename = ename;
+        this.Desig = desig;
+        this.Salary = sal;
+    }
+
+}
+class Manager extends Employee {
+    constructor(eid, ename, desig, sal, project) {
+        super(eid, ename, desig, sal);
+        this.Project = project;
+
     }
     details() {
-        console.log("Name " + this.Name)
+        console.log("Eid " + this.Eid);
+        console.log("Ename " + this.Ename);
+        console.log("Designation " + this.Desig)
+        console.log("Project " + this.Project);
+        console.log("Salary " + this.Salary);
     }
+
+
 }
-class Employee extends Person {
-    constructor(name, title) {
-        super(name); //call Person constructor
-        this.title = title;
-    }
-    details() {
-        super.details(); //calls Person detail()
-        console.log("Title: " + this.title);
-    }
-}
-let obj = new Employee("Rohan", "TeamLeader");
-obj.details()
+var obj = new Manager(100, 'Suren', 'TeamLeader', 45000, 'BFS');
+obj.details();

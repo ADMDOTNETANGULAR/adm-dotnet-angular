@@ -1,23 +1,20 @@
-class Product {
-    constructor() {
-        this.pid = 0;
-        this.pname = '';
-
+class Person {
+    constructor(name) {
+        this.Name = name;
     }
-    set PID(value) {
-        this.pid = value;
-    }
-    get PID() {
-        return this.pid;
-    }
-    set Pname(value) {
-        this.pname = value;
-    }
-    get Pname() {
-        return this.pname;
+    details() {
+        console.log("Name " + this.Name)
     }
 }
-let product = new Product();
-product.PID = 100
-product.Pname = 'Mouse'
-console.log(`PID:${product.PID} Pname:${product.Pname}`)
+class Employee extends Person {
+    constructor(name, title) {
+        super(name); //call Person constructor
+        this.title = title;
+    }
+    details() {
+        super.details(); //calls Person detail()
+        console.log("Title: " + this.title);
+    }
+}
+let obj = new Employee("Rohan", "TeamLeader");
+obj.details()

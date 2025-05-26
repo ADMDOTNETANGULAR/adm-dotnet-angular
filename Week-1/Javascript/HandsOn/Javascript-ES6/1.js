@@ -1,8 +1,8 @@
-let x=10
-let name='raghu'
-let result=true
-let y=12.23
+let x = 10
+let n = 'raghu'
+let result = true
+const y = 12.23 // This is a constant variable
 console.log(x)
-console.log(name)
+console.log(n)
 console.log(result)
 console.log(y)
