@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Recipe</title>
+    <script>
+        window.onload = function () {//  ww w  .j a v  a  2  s  . c o  m
+
+            let rows = document.getElementById("table1").children[0].rows;
+
+
+            for (let i = 0; i < rows.length; i++) {
+                alert(rows[i].cells[0].firstChild.data);
+                alert(rows[i].cells[1].firstChild.data);
+                alert(rows[i].cells[2].firstChild.data);
+            }
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <table id="table1" border="1">
+        <tr>
+            <td>4.5</td>
+            <td>5.3</td>
+            <td>2</td>
+        </tr>
+    </table>
+</body>
+
+</html>

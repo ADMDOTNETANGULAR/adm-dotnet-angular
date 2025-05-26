@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Greet()
+        {
+            let uname=document.getElementById('t1').value;//returns textbox value
+            alert('Hello '+uname)
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>Enter Name</td>
+                <td><input id='t1'></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="Greet" onclick="Greet()">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

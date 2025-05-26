@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dim {
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="dim">I am para1</p>
+    <p class="dim">I am para2</p>
+    <p>I am para3</p>
+    <h1 class="dim">I am header</h1>
+    <script>
+        //access elements using css class
+        let items = document.getElementsByClassName('dim');
+        for (let item of items)
+            alert(item.innerText);
+        //access only p with css dim
+        let elements = document.querySelectorAll('p.dim');//return p with css dim
+        for (let element of elements)
+            alert(element.innerText)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span
+        {
+            color: red;
+        }
+    </style>
+    <script>
+        function Validate()
+        {
+            if(!ValidateName())
+            {
+                document.getElementById('errName').innerText='Name should contain only Alphabets';
+                event.preventDefault();
+            }
+            if(!ValidateAge())
+            {
+                document.getElementById('errAge').innerText='Age should be above 18';
+                event.preventDefault();
+            }
+            if(!ValidateMobile())
+            {
+                document.getElementById('errMobile').innerText='Invalid Mobile no';
+                event.preventDefault();
+            }
+            if(!ValidateEmail())
+            {
+                document.getElementById('errEmail').innerText='Invalid EmailID';
+                event.preventDefault();
+            }
+            if(!ValidatePwd())
+            {
+                document.getElementById('errPwd').innerText='Invalid Password';
+                event.preventDefault();
+            }
+            if(!ValidateCPwd())
+            {
+                document.getElementById('errCpwd').innerText='Password Mismatch';
+                event.preventDefault();
+            }
+
+            function ValidateName()
+            {
+                let uname=document.getElementById('txtName').value;
+                let pattern='^[a-zA-Z]{2,10}$';
+                let Regx=new RegExp(pattern)
+                let result=Regx.test(uname);
+                return result;
+            }
+            function ValidateAge()
+            {
+                let age=document.getElementById('txtAge').value;
+               age=parseInt(age);
+               if(age<18)
+                return false;
+                else
+                return true;
+            }
+            function ValidateMobile()
+            {
+                let mobile=document.getElementById('txtMobile').value;
+                let pattern='^[6-9]{1}[0-9]{9}$';
+                let Regx=new RegExp(pattern)
+                let result=Regx.test(mobile);
+                return result;
+            }
+            function ValidateEmail()
+            {
+                let email=document.getElementById('txtEmail').value;
+                let pattern='^[a-zA-Z]{1}[a-zA-z0-9.]+@[a-z]{2,8}[.]{1}[a-z]{2,3}$';
+                let Regx=new RegExp(pattern)
+                let result=Regx.test(email);
+                return result;
+            }
+            function ValidatePwd()
+            {
+                let pwd=document.getElementById('txtPwd').value;
+                let pattern='^[a-zA-Z0-9]{6,8}$';
+                let Regx=new RegExp(pattern)
+                let result=Regx.test(pwd);
+                return result;
+            }
+            function ValidateCPwd()
+            {
+                let pwd=document.getElementById('txtPwd').value;
+                let cpwd=document.getElementById('txtCpwd').value;
+             if(pwd==cpwd)
+             return true;
+             else
+             return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="Validate()">
+  <table>
+    <tr>
+        <td>Name</td>
+        <td><input type="text" id='txtName'></td>
+        <td><span id='errName'></span></td>
+    </tr>
+    <tr>
+        <td>Age</td>
+        <td><input type="number" id='txtAge'></td>
+        <td><span id='errAge'></span></td>
+    </tr>
+    <tr>
+        <td>Mobile</td>
+        <td><input type="text" id='txtMobile'></td>
+        <td><span id='errMobile'></span></td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td><input type="text" id='txtEmail'></td>
+        <td><span id='errEmail'></span></td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td><input type="password" id='txtPwd'></td>
+        <td><span id='errPwd'></span></td>
+    </tr>
+    <tr>
+        <td>Confirm Password</td>
+        <td><input type="password" id='txtCpwd'></td>
+        <td><span id='errCpwd'></span></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="submit" value="SignUp">
+            <input type="reset" value="Clear">
+        </td>
+    </tr>
+  </table>
+    </form>
+</body>
+</html>

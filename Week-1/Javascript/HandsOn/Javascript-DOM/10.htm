@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM - after()</title>
+</head>
+
+<body>
+    <h1>JavaScript DOM - after()</h1>
+
+    <script>
+        const h1 = document.querySelector('h1');
+
+        // create a new paragraph element
+        const p = document.createElement('p');
+        p.innerText = 'This is JavaScript DOM after() method demo';
+
+        // insert the paragraph after the heading
+        h1.after(p);
+    </script>
+</body>
+
+</html>
