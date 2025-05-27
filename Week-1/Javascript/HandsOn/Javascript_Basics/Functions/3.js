@@ -1,3 +1,5 @@
+//function returns an array of flowers
+// Function to return an array of flowers
 function GetFlowers()
 {
     return [
@@ -13,6 +15,8 @@ for(let flower of GetFlowers())
 }
 function GetStudents()
 {
+    // Function to return an array of student objects
+// This function returns an array of student objects
     let students=[
         {Sid:1,Sname:'Rohan',age:10},
         {Sid:2,Sname:'Ram',age:11},

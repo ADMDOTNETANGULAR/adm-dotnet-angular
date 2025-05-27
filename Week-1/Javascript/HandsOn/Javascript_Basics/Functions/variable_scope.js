@@ -6,9 +6,9 @@ function fun()
      // This is a local variable
     let local='This is local variable'
     loc='This is a local variable without let or var';
-    console.log(global);
-    console.log(local);
-     console.log(loc);
+    console.log(global);// This will print the global variable
+    console.log(local);// This will print the local variable
+     console.log(loc);// This will print the local variable without let or var
 }
 fun()
 console.log(global); // This will print the global variable
