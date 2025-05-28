@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Get an Element's Attribute Value</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+$(document).ready(function(){
+    $(".btn-one").click(function(){
+        var str = $("a").attr("href");
+        alert(str);
+    });
+    $(".btn-two").click(function(){
+        var str = $("img#sky").attr("src");
+        alert(str);
+    });
+});
+    </script>
+</head>
+<body>
+    <button type="button" class="btn-one">Get Link's HREF Attribute</button>
+    <button type="button" class="btn-two">Get Image ALT Attribute</button>
+    <p><a href="http://www.google.com/">Tutorial Republic</a></p>
+    <img id="sky" src="../images/sky.jpg" alt="Cloudy Sky">
+</body>
+</html>                                		

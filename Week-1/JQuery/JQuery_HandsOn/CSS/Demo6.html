@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Set the Values of Multiple CSS Properties</title>
+    <style type="text/css">
+        p {
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").css({"background-color": "yellow", "padding": "20px"});
+    });
+});
+    </script>
+</head>
+<body>
+    <h1>This is a heading</h1>
+    <p style="background-color:orange;">This a paragraph.</p>
+    <p style="background-color:#ee82ee;">This is another paragraph.</p>
+    <p style="background-color:rgb(139,205,50);">This is none more paragraph.</p>
+    <p>This is one last paragraph.</p>
+    <button type="button">Add CSS Styles</button>
+</body>
+</html>                                		

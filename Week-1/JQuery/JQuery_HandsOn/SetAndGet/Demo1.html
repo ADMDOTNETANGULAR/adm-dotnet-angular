@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Set Text Contents of the Elements</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+$(document).ready(function(){
+    $(".btn-one").click(function(){
+        $("p").text("This is demo text.");
+    });
+    $(".btn-two").click(function(){
+        $("p:first").text("This is another demo text.");
+    });
+    $(".btn-three").click(function(){
+        $("p.empty").text("This is one more demo text.");
+    });
+});
+    </script>
+</head>
+<body>
+    <button type="button" class="btn-one">Set All Paragraph's Text</button>
+    <button type="button" class="btn-two">Set First Paragraph's Text</button>
+    <button type="button" class="btn-three">Set Empty Paragraph's Text</button>
+    <p>This is a test paragraph.</p>
+    <p>This is another test paragraph.</p>
+    <p class="empty"></p>
+</body>
+</html>                                		

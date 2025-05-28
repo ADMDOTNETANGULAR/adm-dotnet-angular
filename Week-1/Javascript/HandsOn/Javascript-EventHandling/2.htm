@@ -11,12 +11,12 @@
             let pwd=document.getElementById('txtPwd').value;
             if(uname=='')
             {
-                event.preventDefault(); //prevent from to sent request
+                event.preventDefault(); //prevent form to sent request to server
                 document.getElementById('s1').innerText='Pls Enter Name'
             }
             else if(pwd=='')
             {
-                event.preventDefault(); //prevent from to sent request
+                event.preventDefault();  //prevent form to sent request to server
                 document.getElementById('s1').innerText='Pls Enter Password'
             }
         }

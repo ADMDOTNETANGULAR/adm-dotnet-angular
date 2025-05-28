@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Executing a Function on Hover Event in jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style type="text/css">
+        p {
+            padding: 20px;
+            font: 20px sans-serif;
+            background: #f2f2f2;
+        }
+
+            p.highlight {
+                background: yellow;
+            }
+    </style>
+    <script type="text/javascript">
+$(document).ready(function(){
+    $("p").hover(function(){
+        $(this).addClass("highlight");
+    }, function(){
+        $(this).removeClass("highlight");
+    });
+});
+    </script>
+</head>
+<body>
+    <p>Place mouse pointer on me.</p>
+    <p>Place mouse pointer on me.</p>
+    <p>Place mouse pointer on me.</p>
+</body>
+</html>                                		

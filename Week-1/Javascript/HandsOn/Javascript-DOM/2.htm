@@ -16,7 +16,8 @@
         let elements = document.getElementsByTagName('p'); //retrun array of p objects
         let element = elements[2]; //access 3rd element
         alert(element.innerText)
-        element.innerText = 'Javascript is Object based';
+        element.innerText = 'Javascript is Object based'; //modify the text of 3rd element
+        element.style.color = 'red'; //change the color of 3rd element
         //access all elements
         for (let k = 0; k < elements.length; k++) {
             alert(elements[k].innerText);

@@ -8,12 +8,15 @@
 </head>
 
 <body>
-    <h1>Welcome to Javascript DOM</h1>
+    <h1 style="color: green;">Welcome to Javascript DOM</h1>
     <script>
         //access h1 in javascript
         let obj = document.getElementsByTagName('h1'); //return array of h1 objects
         let txt = obj[0].innerText; //innerText return text with in the h1
-        alert(txt);
+        alert(txt); // display the text in an alert box
+        obj[0].style.color = 'red'; // change the color of the text
+        //change text of h1
+        obj[0].innerText = "Welcome to Javascript DOM - Updated";
     </script>
 </body>
 

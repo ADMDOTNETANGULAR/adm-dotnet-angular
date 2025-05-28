@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Toggle the Classes of the Elements in jQuery</title>
+    <style type="text/css">
+        p {
+            padding: 10px;
+            cursor: pointer;
+            font: bold 16px sans-serif;
+        }
+
+        .highlight {
+            background: yellow;
+        }
+    </style>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+$(document).ready(function(){
+    $("p").click(function(){
+        $(this).toggleClass("highlight");
+    });
+});
+    </script>
+</head>
+<body>
+    <p>Click on me to toggle highlighting.</p>
+    <p class="highlight">Click on me to toggle highlighting.</p>
+    <p>Click on me to toggle highlighting.</p>
+</body>
+</html>                                		

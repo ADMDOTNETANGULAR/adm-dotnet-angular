@@ -5,20 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function changeColor() {
+            //access all p tags
+            let elements = document.getElementsByTagName('p'); //return array of p objects
+            //add css to p elements
+            elements[0].style.color = 'Red';
+            elements[1].style.color = 'Green';
+            elements[2].style.color = 'Blue';
+        }
+    </script>
 </head>
 
 <body>
     <p>I am para1</p>
     <p>I am para2</p>
     <p>I am para3</p>
-    <script>
+    <button onclick="changeColor()">Change Color</button>
+    <!-- <script>
         //access all p tags
         let elements = document.getElementsByTagName('p'); //retrun array of p objects
         //add css to p elements
         elements[0].style.color = 'Red';
         elements[1].style.color = 'Green';
         elements[2].style.color = 'Blue';
-    </script>
+    </script> -->
 </body>
 
 </html>

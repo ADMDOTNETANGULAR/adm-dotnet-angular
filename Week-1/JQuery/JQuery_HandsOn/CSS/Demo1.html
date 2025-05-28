@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Adding multiple Classes to the Elements in jQuery</title>
+    <style type="text/css">
+        .page-header {
+            color: red;
+            text-transform: uppercase;
+        }
+
+        .highlight {
+            background: yellow;
+        }
+    </style>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+$(document).ready(function(){
+    $("button").click(function(){
+        $("h1").addClass("page-header highlight");
+    });
+});
+    </script>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <p>The quick brown fox jumps over the lazy dog.</p>
+    <button type="button">Add Class</button>
+</body>
+</html>                                		

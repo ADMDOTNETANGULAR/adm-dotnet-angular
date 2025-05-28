@@ -3,5 +3,5 @@ class Foo {
     return "Hello";
   }
 }
-console.log(Foo.M());
+console.log(Foo.M()); //access static method M using class name Foo
 

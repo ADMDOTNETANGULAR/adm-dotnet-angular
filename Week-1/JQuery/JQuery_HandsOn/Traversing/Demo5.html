@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Selecting the Previous Sibling Element in jQuery</title>
+    <style type="text/css">
+        .highlight {
+            background: yellow;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+$(document).ready(function(){
+    $("ul").prev().addClass("highlight");
+});
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello World</h1>
+        <p>This is a <em>simple paragraph</em>.</p>
+        <p>This is another paragraph.</p>
+        <ul>
+            <li>Item One</li>
+            <li>Item Two</li>
+        </ul>
+        <ul>
+            <li>Item One</li>
+            <li>Item Two</li>
+        </ul>
+    </div>
+</body>
+</html>   

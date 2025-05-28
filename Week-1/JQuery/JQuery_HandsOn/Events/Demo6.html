@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Executing a Function on Change Event in jQuery</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+$(document).ready(function(){
+    $("select").change(function(){
+        var selectedOption = $(this).val();
+        alert("You have selected - " + selectedOption);
+    });
+    $("#color").change(function () {
+        var c = $(this).val();
+        $("body").css("background-color", c);
+    });
+});
+    </script>
+</head>
+<body>
+    <form>
+        <label>City:</label>
+        <select>
+            <option>London</option>
+            <option>Paris</option>
+            <option>New York</option>
+        </select><br />
+        <label>Select Color:</label>
+        <select id="color">
+            <option>Red</option>
+            <option>Green</option>
+            <option>Yellow</option>
+        </select>
+    </form>
+    <p><strong>Note:</strong> Select any value from the dropdown select and see the result.</p>
+</body>
+</html>                                		

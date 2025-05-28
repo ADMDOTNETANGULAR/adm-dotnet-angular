@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Executing a Function on Focus Event in jQuery</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style type="text/css">
+        label {
+            display: block;
+            margin: 5px 0;
+        }
+
+            label span {
+                display: none;
+            }
+    </style>
+    <script type="text/javascript">
+$(document).ready(function(){
+    $("input").focus(function(){
+        $(this).next("span").show()
+    });
+});
+    </script>
+</head>
+<body>
+    <form>
+        <label>Email: <input type="text"> <span>Enter EmailId</span></label>
+        <label>Password: <input type="password"> <span>Enter Password</span></label>
+        <label><input type="submit" value="Sign In"> <span>focus fire</span></label>
+    </form>
+    <p><strong>Note:</strong> Click on the form control or press the "Tab" key to set focus.</p>
+</body>
+</html>                                		

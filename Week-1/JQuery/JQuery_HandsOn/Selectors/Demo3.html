@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Select Element by Attribute</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+$(document).ready(function(){
+    // Highlight paragraph elements
+    
+    $('input').css('background', 'yellow');
+    $('input[type="text"]').css("background", "red");
+});
+    </script>
+</head>
+<body>
+    <form>
+        <label>Name: <input type="text"></label>
+        <label>Password: <input type="password"></label>
+        <input type="submit" value="Sign In">
+    </form>
+</body>
+</html>                                		

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Get HTML Contents of an Element</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+$(document).ready(function(){
+    $(".btn-one").click(function(){
+        var str = $("p").html();
+        alert(str);
+    });
+    $(".btn-two").click(function(){
+        var str = $("#container").html();
+        alert(str);
+    });
+});
+    </script>
+</head>
+<body>
+    <button type="button" class="btn-one">Get Paragraph's HTML Contents</button>
+    <button type="button" class="btn-two">Get Container's HTML Contents</button>
+    <div id="container">
+        <h1>Hello World!</h1>
+        <p>The quick <b>brown fox</b> jumps over the lazy dog.</p>
+    </div>
+</body>
+</html>

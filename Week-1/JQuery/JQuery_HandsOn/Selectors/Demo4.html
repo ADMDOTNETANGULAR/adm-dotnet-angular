@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Select Element by Compound Selector</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+$(document).ready(function(){
+    // Highlight only paragraph elements with class mark
+    $("p.mark").css("background", "yellow");
+
+    // Highlight only span elements inside the element with ID mark
+    $("#mark span").css("background", "yellow");
+
+    // Highlight li elements inside the ul elements
+    $("ul li").css("background", "yellow");
+
+     //Highlight li elements only inside the ul element with id mark
+    $("ul#mark li").css("background", "red");
+
+    // Highlight li elements inside all the ul element with class mark
+    $("ul.mark li").css("background", "green");
+
+    // Highlight all anchor elements with target blank
+    $('a[target="_blank"]').css("background", "yellow");
+});
+    </script>
+</head>
+<body>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+    <p>This is one more paragraph.</p>
+    <ul>
+        <li>List item one</li>
+        <li>List item two</li>
+        <li>List item three</li>
+    </ul>
+    <ul id="mark">
+        <li>List item one</li>
+        <li>List item two</li>
+        <li>List item three</li>
+    </ul>
+    <ul class="mark">
+        <li>List item one</li>
+        <li>List item two</li>
+        <li>List item three</li>
+    </ul>
+    <p>Go to <a href="#" target="_blank">Home page</a></p>
+</body>
+</html>                                		

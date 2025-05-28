@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Removing Classes from the Elements in jQuery</title>
+    <style type="text/css">
+        .page-header {
+            color: red;
+            text-transform: uppercase;
+        }
+
+        .highlight {
+            background: yellow;
+        }
+    </style>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+$(document).ready(function(){
+    $("button").click(function(){
+        $("h1").removeClass("page-header");
+        $("p").removeClass("hint highlight");
+    });
+});
+    </script>
+</head>
+<body>
+    <h1 class="page-header">Demo Text</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    <p class="hint highlight"><strong>Tip:</strong> Lorem Ipsum is dummy text.</p>
+    <button type="button">Remove Class</button>
+</body>
+</html>                                		

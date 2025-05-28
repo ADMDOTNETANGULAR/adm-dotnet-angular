@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Get Text Contents of the Elements</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+$(document).ready(function(){
+    $(".btn-one").click(function(){
+        var str = $("p").text();
+        alert(str);
+    });
+    $(".btn-two").click(function(){
+       var str = $("p:first").text();
+       alert(str);
+    });
+    $(".btn-three").click(function(){
+       var str = $("p.extra").text();
+       alert(str);
+    });
+});
+    </script>
+</head>
+<body>
+    <button type="button" class="btn-one">Get All Paragraph's Text</button>
+    <button type="button" class="btn-two">Get First Paragraph's Text</button>
+    <button type="button" class="btn-three">Get Last Paragraph's Text</button>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+    <p class="extra">This is one more paragraph.</p>
+</body>
+</html>                                		

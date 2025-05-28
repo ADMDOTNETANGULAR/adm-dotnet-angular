@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Set Form Fields Values</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+$(document).ready(function(){
+    $("button").click(function(){
+        var text = $(this).text();
+        $('#t1').val(text);
+    });
+});
+    </script>
+</head>
+<body>
+    <button type="button">Discovery</button>
+    <button type="button">Atlantis</button>
+    <button type="button">Endeavour</button>
+    <p><strong>Note:</strong> Click the above buttons to set the value of following input box.</p>
+    <p>
+        <input type="text" id="t1">
+    </p>
+</body>
+</html>                                		

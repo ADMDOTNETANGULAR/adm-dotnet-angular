@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Showing Ajax Load Request Status in jQuery</title>
+    <script src="../Scripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#box").load("test-content1.html", function(responseTxt, statusTxt, jqXHR){
+            if(statusTxt == "success"){
+                alert("New content loaded successfully!");
+            }
+            if(statusTxt == "error"){
+                alert("Error: " + jqXHR.status + " " + jqXHR.statusText);
+            }
+        });
+    });
+});
+    </script>
+</head>
+<body>
+    <div id="box">
+        <h2>Click button to load new content inside DIV box</h2>
+    </div>
+    <button type="button">Load Content</button>
+</body>
+</html>                                		

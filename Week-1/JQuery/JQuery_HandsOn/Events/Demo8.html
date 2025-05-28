@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Executing a Function on Blur Event in jQuery</title>
+    <script src="../Scripts/jquery-1.10.2.js"></script>
+    <style type="text/css">
+        label {
+            display: block;
+            margin: 5px 0;
+        }
+
+            label span {
+                display: none;
+            }
+    </style>
+    <script type="text/javascript">
+$(document).ready(function(){
+    $("input").blur(function(){
+        $(this).next("span").show().fadeOut("slow");
+    });
+});
+    </script>
+</head>
+<body>
+    <form>
+        <label>Email: <input type="text"> <span>blur fire</span></label>
+        <label>Password: <input type="password"> <span>blur fire</span></label>
+        <label><input type="submit" value="Sign In"> <span>blur fire</span></label>
+    </form>
+    <p><strong>Note:</strong> Click away from the form control or press the "Tab" key to remove focus.</p>
+</body>
+</html>                                		

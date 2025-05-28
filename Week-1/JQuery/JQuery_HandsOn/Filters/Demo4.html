@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Filtering the Selection of Elements in jQuery via Selectors</title>
+    <style type="text/css">
+        .highlight {
+            background: yellow;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+$(document).ready(function(){
+    $("ul li").filter(":even").addClass("highlight");
+});
+    </script>
+</head>
+<body>
+    <h2>Unordered List</h2>
+    <ul>
+        <li>First list item</li>
+        <li>Second list item</li>
+        <li>Third list item</li>
+        <li>Fourth list item</li>
+    </ul>
+    
+</body>
+</html>                                		

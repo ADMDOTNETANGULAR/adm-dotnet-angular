@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script src="../Scripts/jquery-1.10.2.js"></script>
+    <script>
+        $(function () {
+            $("button").click(function () {
+                $.get("content.html", function (data, responseText) {
+                    $("#divTestArea1").text(data);
+                 
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+ <div id="divTestArea1"></div>
+    <button>Click</button>
+</body>
+</html>

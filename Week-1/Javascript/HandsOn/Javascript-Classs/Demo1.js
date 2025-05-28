@@ -1,12 +1,16 @@
 class student {
+  //consturctor with parameters
   constructor(name, age) {
     this.name = name;
     this.age = age;
   }
+  //define method 
+  //to display the values
+  //of the properties
   display() {
     console.log(this.name);
     console.log(this.age);
-    console.log(this.city);
+
   }
 }
 var obj = new student("sachin", 12);

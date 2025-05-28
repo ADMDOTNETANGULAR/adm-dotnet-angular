@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Set Element's Attribute Value</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+$(document).ready(function(){
+    $("button:first").click(function(){
+        $('input[type="checkbox"]').attr("checked", "checked");
+    });
+    $("button:last").click(function () {
+        $('#sky').attr("src", "../images/balloons.jpg");
+    });
+});
+    </script>
+</head>
+<body>
+    <p><label><input type="checkbox"></label> I agree with terms and conditions.</p>
+    <button type="button">Check</button>
+    <button type="button">Chage</button><br />
+    <img id="sky" src="../images/sky.jpg" alt="Cloudy Sky">
+</body>
+</html>                                		

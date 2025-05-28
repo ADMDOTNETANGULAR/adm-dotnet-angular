@@ -9,7 +9,7 @@ class Employee {
 }
 class Manager extends Employee {
     constructor(eid, ename, desig, sal, project) {
-        super(eid, ename, desig, sal);
+        super(eid, ename, desig, sal); // Call the parent class constructor
         this.Project = project;
 
     }

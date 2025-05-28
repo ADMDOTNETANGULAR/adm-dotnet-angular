@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+        $(function()
+        {
+            var obj = [{Sid:1,Sname:'Rohan',Age:12},
+                { Sid: 2, Sname: 'Suren', Age: 14 },
+                { Sid: 3, Sname: 'Jeson', Age: 13 },
+                { Sid: 3, Sname: 'Jeson', Age: 13 },
+                { Sid: 3, Sname: 'Jeson', Age: 13 },
+                { Sid: 3, Sname: 'Jeson', Age: 13 }
+
+            ]
+            var rh = '<tr><td>Sid</td><td>Sname</td><td>Age</td>';
+            $("#t1").append(rh);
+            var trh = '';
+            $.each(obj,function(i,val)
+            {
+                trh = '<tr><td>'+val.Sid+'</td><td>'+val.Sname+'</td><td>'+val.Age+'</td></tr>'
+                $('#t1').append(trh);
+            })
+           
+            $('table tr').slice(2,4).css('background-color','yellow');
+        })
+    </script>
+</head>
+<body>
+    <table id="t1" class="table table-bordered">
+
+    </table>
+</body>
+</html>

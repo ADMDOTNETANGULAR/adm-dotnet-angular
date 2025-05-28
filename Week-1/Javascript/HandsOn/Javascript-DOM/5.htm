@@ -7,14 +7,17 @@
     <title>Document</title>
 </head>
 
-<body>
+<body style="background-color: teal;">
     <p id="p1">I am para1</p>
     <h1 id="h1">Javascript Demo</h1>
+    <button onclick="toDO()">Click</button>
     <script>
-        alert(document.body.innerHTML); //return html content
-        alert(document.body.innerText);
-        //apply backcolor
-        document.body.style.backgroundColor = 'blue';
+        function toDO() {
+            alert(document.body.innerHTML); //return html content
+            alert(document.body.innerText);
+            //apply backcolor
+            document.body.style.backgroundColor = 'blue';
+        }
     </script>
 </body>
 
