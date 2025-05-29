@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Executing a Function on Click Event in jQuery</title>
@@ -12,16 +13,19 @@
         }
     </style>
     <script type="text/javascript">
-$(document).ready(function(){
-    $("p").click(function(){
-        $(this).slideUp();
-    });
-});
+        $(document).ready(function () {
+            $("p").click(function () {
+                $(this).slideUp(1000); // This will hide the paragraph with a sliding effect
+                // $(this).hide(); // This will hide the paragraph immediately without any effect
+            });
+        });
     </script>
 </head>
+
 <body>
     <p>Click on me and I'll disappear.</p>
     <p>Click on me and I'll disappear.</p>
     <p>Click on me and I'll disappear.</p>
 </body>
-</html>                                		
+
+</html>

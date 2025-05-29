@@ -6,13 +6,14 @@ let users=[
 ]
 //Find
 
-// let user=users.find(i=>i.id>2)
-// if(user!=null)
-// console.log(user.name);
-// else
-// console.log('Invalid Id')
+let user=users.find(i=>i.id==14) //returns first value that matches the condition
+
+if(user!=null)
+console.log(user.name);
+else
+console.log('Invalid Id')
 
 //Filter
 //return multiple values
-let arr=users.filter(i=>i.salary>13000)
+let arr=users.filter(i=>i.salary>10000)
 console.log(arr);

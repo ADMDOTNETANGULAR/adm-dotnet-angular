@@ -4,9 +4,12 @@
 <script>
 function clickCounter() {
   
-        if (sessionStorage.clickcount) {
+        if (sessionStorage.clickcount) { // Check if the sessionStorage item exists
+            //increment the counter if it exists
             sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
         } else {
+            //set value to 1 if it doesn't exist
+            //sessionStorage is cleared when the page session ends
             sessionStorage.clickcount = 1;
         }
         document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";

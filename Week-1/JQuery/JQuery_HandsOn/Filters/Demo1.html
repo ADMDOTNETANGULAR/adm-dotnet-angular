@@ -1,23 +1,25 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Selecting the First Element in jQuery</title>
     <style type="text/css">
         .highlight {
-            background: yellow;
+            color: yellow;
         }
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            //$("ul li").css("background", "red");
-    $("ul li").first().addClass("highlight");
+            $("ul li").css("background", "red"); // Set background color of all list items to red
+            $("ul li").first().addClass("highlight");// Add highlight class to the first list item
 
-});
+        });
     </script>
 </head>
+
 <body>
     <h2>Unordered List</h2>
     <ul>
@@ -26,7 +28,8 @@
         <li>Third list item</li>
         <li>Fourth list item</li>
     </ul>
- 
-    
+
+
 </body>
-</html>                                		
+
+</html>
