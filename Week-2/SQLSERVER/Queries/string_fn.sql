@@ -1,0 +1,10 @@
+select len('Hello World')
+select left('Hello World',2)
+select right('Welcome',2)
+select SUBSTRING('Hello World',0,6) --Hello
+select REPLACE('Hello World','World','Sql')
+select LTRIM('   Hello')
+select RTRIM('Hello     ')
+select Trim('    Hello     ')
+select upper('Hello')
+select lower('HELLo')

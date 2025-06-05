@@ -1,0 +1,48 @@
+1.Dotnet Framework
+2.Dotnet Core
+both are development platforms to build applications using dotnet
+Dotnet Framework stick with windows platform
+Dotnet Core supports cross platform(Windows,Linux,Mac)
+Dotnet Framework Versions
+=======================
+1.0
+1.1
+2.0
+3.0
+3.5
+4.0
+4.5
+4.6
+4.8(latest)
+Dotnet Core Versions
+===================
+1.0
+1.1
+2.0
+3.0
+5.0
+6.0
+7.0
+8.0
+9.0(latest)
+
+Applications build using Dotnet
+
+1. Console App
+2. Web App(Asp.net Core Framework(WepApp or MVC)
+3. Service App(RestAPI/WebAPI Framework)
+4. Mobile App(Xamarin Framework)
+5. Desktop App/Windows App(Winforms)
+
+Environment Setup
+===================
+1. Windows platform
+2. Visual Studio Community 2022 Edition(App Development)
+3. Sqlserver(Data Storage)
+
+C#.Net
+====
+1. It is the Primary Lang in Dotnet Framework(Vb.net,VC++,F#.Net)
+2. C# is object oriendted programming lang
+3. C# syntax is similar to c++ and core java
+4. C# current version is c# 11.0/12.0
