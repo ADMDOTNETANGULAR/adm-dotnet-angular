@@ -43,6 +43,6 @@ Environment Setup
 C#.Net
 ====
 1. It is the Primary Lang in Dotnet Framework(Vb.net,VC++,F#.Net)
-2. C# is object oriendted programming lang
+2. C# is object oriented programming lang
 3. C# syntax is similar to c++ and core java
 4. C# current version is c# 11.0/12.0
