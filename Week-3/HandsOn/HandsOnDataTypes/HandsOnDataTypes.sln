@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36127.28 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandsOnDataTypes", "HandsOnDataTypes.csproj", "{4C38356D-CD50-44A4-8915-A8E49D60B2D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C38356D-CD50-44A4-8915-A8E49D60B2D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C38356D-CD50-44A4-8915-A8E49D60B2D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C38356D-CD50-44A4-8915-A8E49D60B2D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C38356D-CD50-44A4-8915-A8E49D60B2D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {573F08EE-C516-49A3-A198-8955DFCB81D3}
+	EndGlobalSection
+EndGlobal
