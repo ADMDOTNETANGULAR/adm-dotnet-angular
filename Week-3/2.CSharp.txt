@@ -1,0 +1,32 @@
+MethodOverriding:
+=================
+It is a concept of redefining or extending base class functions in derived class
+the method should not be the static method
+declared virtual keywork to the base class methods to override in child class
+declared override keyword while redefined/extend the base class method in child class
+
+Abstract Class
+-------------
+in c# abstract class is a class that can not be instantiated directly.It is meant to be inherited by other classes
+it includes:
+1. Abstract methods(no implementation)
+2. Non-Abstract methods(with implementation)
+3. Properties,fields,constuctors etc
+When to use Abstract class
+==========================
+1. you want to provide common base for related classes
+2. some methods must be overridden in derived classes
+3. you want to provide default behavior for some members
+
+Interfaces
+============
+an interface defines a contract that classes or structs can be implement.
+interface is purely abstract
+interface contain methods with no implementation
+properties,indexes and events also include.
+
+Why Interfaces?
+==================
+1. achieve the abstraction
+2. enable multiple inheritance
+3. to promote loose coupling(good for testing,dependency injection)
