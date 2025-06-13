@@ -1,0 +1,12 @@
+common regex patterns
+========================
+\d    Digit(0-9)
+\w    Word character(a-z,A-Z,0-9,_)
+\s    Whitespace
+.     Any Char
+*     0 or more items(chars)
++     1 or more items
+{n}   Exactly n items
+^     Start of string
+$     End of string
+[]    group char
