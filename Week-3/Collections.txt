@@ -1,0 +1,27 @@
+Collections
+============
+A collection is a group of object or data
+collections are use to manage data like add,update,remove and fetch
+collections are dynamic in size
+All collections are class types.
+collections are two types
+1. Non Generic Collections(Old one)
+System.Collections
+ArrayList
+HashTable
+SortedList
+Stack
+Queue
+It can be store any type of data(Primitive and complex) in object form
+and return in object form
+2. Generic Collections(using in projects)
+
+System.Collections.Generic
+
+1. List<T> it is index based collection i.e access the value using index
+2. Dictionary<K,V> it is key-value based collection and access the value using key
+3. SortedList<K,V> it is key-value based collection and access the value using key, it stores the items sorted order of the key
+4. Stack<T> LIFO - Last in First out
+5. Queue<T> FIFO- First in First Out 
+6. LinkedList<T>
+7. HashSet<T> same lik list additionally perform set operations

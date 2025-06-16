@@ -16,8 +16,13 @@ namespace HandsOnStringAndStringBuilder
             Console.WriteLine(stringBuilder.ToString());
             stringBuilder.Replace("World", "C#");
             Console.WriteLine(stringBuilder);
+            Console.WriteLine(Math.PI);
+            int id = new Random().Next(); //return random value
+            Console.WriteLine(id);
+            id= new Random().Next(1,1000);
+            Console.WriteLine(id);
 
-            
+
         }
     }
 }
