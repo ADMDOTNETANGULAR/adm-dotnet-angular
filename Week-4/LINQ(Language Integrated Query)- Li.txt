@@ -1,0 +1,21 @@
+LINQ(Language Integrated Query)- Linq is a uniform query pattern to filter/fetch data from any data source(Tables,xml,datasets and collections)
+LINQ Flavors
+===========
+1. LINQ to Objects(Collections and Arrays)
+2. LINQ to XML(xml as the data source)
+3. LINQ to Dataset(Dataset as the data source)
+4. LINQ to SQL(sqlserver as the data source)
+5. LINQ to Entities(Entity Framework)
+
+System.Linq
+
+LINQ Queries
+==============
+1. Using Query Syntax
+2. Using Method Syntax(Lambda expressions)
+
+Query Syntax
+============
+var result= from variable in data_source where <condition> select variable
+
+Note: objects which are implemented IEnumbarale and IQueraable interfaces used as a data source.

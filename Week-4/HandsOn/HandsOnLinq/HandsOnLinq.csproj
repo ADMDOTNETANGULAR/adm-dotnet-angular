@@ -5,7 +5,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>HandsOnGenericCollections.Class1</StartupObject>
+    <StartupObject>HandsOnLinq.Demo6</StartupObject>
   </PropertyGroup>
 
 </Project>
