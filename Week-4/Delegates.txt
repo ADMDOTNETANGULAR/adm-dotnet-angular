@@ -1,0 +1,18 @@
+Delegate
+======
+A Delete point to the function or Delegate refer methods/functions
+A Delegate is an object which refer methods
+Delegates are use to invoke methods at runtime
+Delegate is a user-defined reference type
+
+In c# Delegates are using in
+1. callback functions
+2. event handling programming
+3. multithreading
+4. LINQ
+
+Lambda expression: it is a anonymous block of code passing to delegate
+syntax:
+=====
+(params)=>expression
+(a,b)=>a+b
