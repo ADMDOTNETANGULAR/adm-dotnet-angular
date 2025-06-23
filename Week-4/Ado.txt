@@ -1,0 +1,29 @@
+Ado.net
+=======
+Ado.net is data model/data access tech use to connect to diff databases(SqlServer,Oracle,MySql etc)
+Ado.net works on any dontet app(Console,Web,Windows etc)
+Ado.net come up with diff data providers to connect to diff databases and All data providers are in the form of Library
+System.Data.SqlClient -------------------- SqlServer
+System.Data.OracleClient------------------ Oracle
+System.Data.Odbc-------------------------- MySql
+System.Data is the base library in Ado.net
+
+Connect to SqlServer using Ado.net
+=======================================
+1. System.Data.SqlClient/Microsoft.Data.SqlCleint
+2. System.Data.SqlClient Classes
+	a. SqlConnection- Connect to the database
+	b. SqlCommand -  use to write queries and call the stored procedure
+	c. SqlDataReader- stores result set data
+
+Note: Nuget Package Manager is use to download and install any package in dotnet core apps
+
+SqlConnectionString
+
+Data Source=DESKTOP-4O1D65I\SQLEXPRESS;Initial Catalog=ADMDOTNET;Integrated Security=True;Trust Server Certificate=True
+
+SqlCommand class query methods
+
+1. int count=ExecuteNonQuery()- to execute dml queries
+2. SqlDataReader dr=ExecuteReader() - to execute select querie
+3. object vale=ExecuteScalar() - when select query returns single value

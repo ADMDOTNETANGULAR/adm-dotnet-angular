@@ -1,0 +1,1 @@
+Data Source=DESKTOP-4O1D65I\SQLEXPRESS;Initial Catalog=ADMDOTNET;Integrated Security=True;Trust Server Certificate=True
