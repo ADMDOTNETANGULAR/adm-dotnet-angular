@@ -27,9 +27,9 @@ namespace HandsOnMultiThreading
         {
             Thread t1 = new Thread(Task1);
             Thread t2 = new Thread(Task2);
-            t1.Priority = ThreadPriority.Highest; // Setting priority for t1
+            t1.Priority = ThreadPriority.Lowest; // Setting priority for t1
             t1.Start();
-            t2.Priority = ThreadPriority.Lowest;// Setting priority for t2
+            t2.Priority = ThreadPriority.Highest;// Setting priority for t2
             t2.Start();
             Console.WriteLine("Main Thread Running..");
 

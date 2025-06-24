@@ -29,7 +29,7 @@ namespace HandsOnMultiThreading
             Thread t1 = new Thread(Task1);
             Thread t2 = new Thread(Task2);
             t1.Start();
-            t1.Join(1000);
+            t1.Join(1000);// Wait for t1 to complete or timeout after 1000 milliseconds
             t2.Start();
             Console.WriteLine("Main Thread Running..");
 

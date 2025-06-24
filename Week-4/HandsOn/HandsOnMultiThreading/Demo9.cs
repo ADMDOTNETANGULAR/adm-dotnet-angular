@@ -20,7 +20,7 @@ namespace HandsOnMultiThreading
         static void Main()
         {
             Thread t = new Thread(Task);
-           t.IsBackground = true; // Setting the thread as a background thread
+          t.IsBackground = true; // Setting the thread as a background thread
             // Background threads do not prevent the application from exiting
             t.Start();
             t.Join(1000);

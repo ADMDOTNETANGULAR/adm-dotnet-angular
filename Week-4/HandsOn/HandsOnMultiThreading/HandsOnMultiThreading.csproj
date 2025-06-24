@@ -5,7 +5,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>HandsOnMultiThreading.Test_Demo3</StartupObject>
+    <StartupObject>HandsOnMultiThreading.Demo12</StartupObject>
   </PropertyGroup>
 
 </Project>
