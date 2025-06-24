@@ -19,7 +19,7 @@ namespace HandsOnAdo
                 //execute command and fetch data
                 SqlDataReader reader=command.ExecuteReader();
                 //SqlDataReader is used to read data in a forward-only stream
-                if(reader.HasRows) //check if there are any rows returned
+                if (reader.HasRows) //check if there are any rows returned
                 {
                    // reader.Read(); //read the first row
                    while(reader.Read()) //read all rows
@@ -30,7 +30,7 @@ namespace HandsOnAdo
                     //Close the reader
                     reader.Close();
                     //Close the connection
-                    connection.Close();
+                    
 
                 }
                 
