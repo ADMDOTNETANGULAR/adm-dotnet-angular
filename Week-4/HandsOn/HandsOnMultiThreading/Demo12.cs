@@ -12,13 +12,21 @@ namespace HandsOnMultiThreading
         static readonly object _lock = new object();
         static void Increment()
         {
-            for (int i = 0; i < 1000; i++)
+            try
             {
-                lock (_lock)
+                for (int i = 0; i < 1000; i++)
                 {
-                    counter++;
-                }
+                    lock (_lock)
+                    {
+                        counter++;
+                    }
 
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
 
