@@ -1,0 +1,27 @@
+ORM(Object Relational Mapping)
+=============================
+ORM is a technique or a tool that helps developers interact with a database table using objects in their project, instead of writing raw Sql Queries.
+Why use ORM?
+============
+1. avoid manual sql queries
+2. Map tables to c# classes automatically
+3. Reduce boilerplate code
+4. provide type safety and Intellisence
+
+KeyFeatures of EF Core
+======================
+1. Code-First Approach: Your write C# classes(domain classes), and EF generate the database schema
+2. Databsase- First Approach: Generate c# models from an existing DB
+3. Migrations: Easily manage schema changes using CLI
+4. Change Tracking: Automatically tracks changes in your objects.
+5. Lazy,Eager and Explicit Loading: Controls how related data is loaded
+6. Linq Support: Strong Integration with LINQ queries
+7. Async Operations: works well with async/await
+
+EF Core Architecture Overview
+===========================
+1. DbContext: The main class to interact with database
+2.Dbset<TEntity>: Reperesent a table in the database
+3. Models/Entities : c# classes that map the tables
+4. LINQ Queries: you write c# queries ,which EF translate to sql .
+5.Migrations: used to create/update database schema from code
