@@ -80,6 +80,16 @@ namespace HandsOnSOLIDPrinciples.OCP
             return Interest;
         }
     }
+    class BusinessAccount: IAccount
+    {
+        public decimal Balance { get; set; } = 0;
+        public decimal CalcInterest()
+        {
+            // Business account interest calculation logic
+            decimal Interest = (Balance * 6) / 100;
+            return Interest;
+        }
+    }
     #endregion
     internal class Demo2
     {
