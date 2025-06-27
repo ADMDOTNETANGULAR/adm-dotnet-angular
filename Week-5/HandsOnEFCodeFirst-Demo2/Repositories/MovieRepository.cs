@@ -51,25 +51,25 @@ namespace HandsOnEFCodeFirst_Demo2.Repositories
         public async Task<List<Movie>> GetMoviesByDirectorAsync(string director)
         {
            return await _context.Movies
-                .Where(m => m.Director.Equals(director, StringComparison.OrdinalIgnoreCase))
+                .Where(m => m.Director.Equals(director))
                 .ToListAsync(); // Get movies by director
         }
 
         public async Task<List<Movie>> GetMoviesByGenreAsync(string genre)
         {
           return await _context.Movies
-                .Where(m => m.Genre != null && m.Genre.Equals(genre, StringComparison.OrdinalIgnoreCase))
+                .Where(m => m.Genre != null && m.Genre.Equals(genre))
                 .ToListAsync(); // Get movies by genre
         }
 
         public async Task<List<Movie>> GetMoviesByRatingAsync(decimal rating)
         {
             return await _context.Movies
-                .Where(m => m.Rating.HasValue && m.Rating.Value == rating)
+                .Where(m => m.Rating.HasValue && m.Rating.Value >= rating)
                 .ToListAsync(); // Get movies by rating
         }
 
-        public async Task<List<Movie>> GetMoviesByReleaseDate(int year)
+        public async Task<List<Movie>> GetMoviesByReleaseDateAsync(int year)
         {
             return await _context.Movies
                 .Where(m => m.ReleaseDate.HasValue && m.ReleaseDate.Value.Year == year)
@@ -79,7 +79,7 @@ namespace HandsOnEFCodeFirst_Demo2.Repositories
         public async Task UpdateMovieAsync(Movie movie)
         {
             _context.Movies.Update(movie); // Update the movie in the context
-            await _context.Movies.FindAsync(movie.MovieId);
+            await _context.SaveChangesAsync(); // Save changes to the database
         }
     }
 }
