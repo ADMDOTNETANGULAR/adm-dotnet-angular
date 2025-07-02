@@ -1,0 +1,10 @@
+MVC Stands for Model View And Controller
+
+Model: It is a class where we can define the application logic/database logic
+View: Views are used to design the webpages(using razor pages)
+Controller: Controllers handles user request and responses
+
+Default url format in MVC
+
+http://localhost:port/<controller_name>/<action_name>
+http://localhost:port/<controller_name>/<action_name>/<parameters>

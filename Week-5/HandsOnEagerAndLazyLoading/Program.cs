@@ -77,10 +77,11 @@ namespace HandsOnEagerAndLazyLoading
             using (var context = new MyContext())
             {
                 var product = context.Products.FirstOrDefault(p => p.Name == "Laptop");
+                //var orders = product.Orders;// This will not load Orders yet due to lazy loading being enabled.
                 if (product != null)
                 {
                     // Explicitly loading the Orders for the product
-                    context.Entry(product).Collection(p => p.Orders).Load();
+                    context.Entry(product).Collection(p => p.Orders).Load();// This will load the Orders for the product explicitly
                     Console.WriteLine($"Product: {product.Name}, Price: {product.Price}");
                     foreach (var order in product.Orders)
                     {
