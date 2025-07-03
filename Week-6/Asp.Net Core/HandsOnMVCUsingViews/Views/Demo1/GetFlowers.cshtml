@@ -1,0 +1,25 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetFlowers</title>
+</head>
+<body>
+    <div>
+        @{
+            //ViewDate returns data in the form of object everytime
+            string[] flowers = ViewData["flowers"] as string[]; // Retrieve the array of flowers from ViewData
+            foreach (var item in flowers)
+            {
+                <p>@item</p>
+                // Display each flower in a paragraph
+            }
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Greet</title>
+</head>
+<body>
+    <div>
+        @{
+            string name = ViewData["n"] as string;// Retrieve the name from ViewData
+            if (ViewData["n"] == null)
+            {
+                <h1>Welcome Guest</h1>
+            }
+            else
+            {
+                for (int i = 1; i <= 10; i++)
+                {
+                    <h1>Welcome @ViewData["n"]</h1>
+                }
+            }
+        }
+    </div>
+
+</body>
+</html>

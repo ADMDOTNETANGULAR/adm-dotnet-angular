@@ -1,0 +1,24 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetCities</title>
+</head>
+<body>
+    <div>
+        @{
+            string user = ViewBag.User; // Retrieve the user from ViewBag
+            foreach (var item in ViewBag.Cities)
+            {
+                <p>@item</p>
+                // Display each city in a paragraph
+            }
+        }
+    </div>
+</body>
+</html>

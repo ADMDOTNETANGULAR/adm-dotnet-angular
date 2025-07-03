@@ -1,8 +1,8 @@
 using System.Diagnostics;
+using HandsOnMVCUsingViews.Models;
 using Microsoft.AspNetCore.Mvc;
-using MyFirstWebApp.Models;
 
-namespace MyFirstWebApp.Controllers
+namespace HandsOnMVCUsingViews.Controllers
 {
     public class HomeController : Controller
     {
@@ -12,7 +12,7 @@ namespace MyFirstWebApp.Controllers
         {
             _logger = logger;
         }
-        //action methods
+
         public IActionResult Index()
         {
             return View();
@@ -20,7 +20,7 @@ namespace MyFirstWebApp.Controllers
 
         public IActionResult Privacy()
         {
-            return View();//Privacy page as Response
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
