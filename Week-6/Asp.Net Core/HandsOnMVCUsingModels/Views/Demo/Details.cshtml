@@ -1,0 +1,33 @@
+﻿@model HandsOnMVCUsingModels.Models.Book
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        @if (Model != null)
+        {
+            <h2>Book Details</h2>
+            <pre>
+                    Id:@Model.Id
+                    Title:@Model.Title
+                    Author:@Model.Author
+                    Price:@Model.Price
+                </pre>
+        }
+        else
+        {
+            <h2>No Book Found!</h2>
+        }
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿@model HandsOnMVCUsingEF.Models.ProductDto;
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<form action="Edit" method="post">
+    <h1>Create</h1>
+    <div class="form-group">
+        <label asp-for="ProductId" class="control-label"></label>
+        <input asp-for="ProductId" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="ProductName" class="control-label"></label>
+        <input asp-for="ProductName" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="Price" class="control-label"></label>
+        <input asp-for="Price" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Quantity" class="control-label"></label>
+        <input asp-for="Quantity" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

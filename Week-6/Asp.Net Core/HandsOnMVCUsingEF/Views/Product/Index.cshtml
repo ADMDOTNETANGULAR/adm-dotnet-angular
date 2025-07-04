@@ -1,0 +1,54 @@
+﻿@model IEnumerable<HandsOnMVCUsingEF.Models.ProductDto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                ProductId
+            </th>
+            <th>
+                ProductName
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Stock
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.ProductId
+                </td>
+                <td>
+                    @item.ProductName
+                </td>
+                <td>
+                    @item.Price
+                </td>
+                <td>
+                    @item.Quantity
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.ProductId">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

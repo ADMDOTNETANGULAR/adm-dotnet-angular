@@ -1,0 +1,25 @@
+﻿@model HandsOnMVCUsingEF.Models.ProductDto
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<div class="container">
+    @if (Model == null)
+    {
+        <p class="text-danger">Product not found.</p>
+    }
+    else
+    {
+        <h1>Details</h1>
+        <pre>
+                Id:@Model.ProductId
+                Name:@Model.ProductName
+                Price:@Model.Price
+                @* Qty:@Model.Quantity *@
+            </pre>
+    }
+    
+    <a asp-action="Index">View All</a>
+</div>
+
