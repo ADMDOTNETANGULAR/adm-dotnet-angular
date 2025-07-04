@@ -1,0 +1,38 @@
+﻿@model List<HandsOnMVCUsingModels.Dtos.OrderBook>
+@{
+    ViewData["Title"] = "ViewOrders";
+}
+
+<div class="container">
+    <h2>View Orders</h2>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>BookId</th>
+                        <th>Book Title</th>
+                        <th>Author</th>
+                        <th>Price</th>
+                        <th>OrderDate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var order in Model)
+                    {
+                        <tr>
+                            <td>@order.OrderId</td>
+                            <td>@order.Id</td>
+                            <td>@order.Title</td>
+                            <td>@order.Author</td>
+                            <td>@order.Price.ToString("C")</td>
+                            <td>@order.OrderDate.ToShortDateString()</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
