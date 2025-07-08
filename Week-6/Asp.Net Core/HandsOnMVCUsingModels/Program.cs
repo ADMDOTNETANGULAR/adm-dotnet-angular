@@ -18,7 +18,7 @@ namespace HandsOnMVCUsingModels
             }
             app.UseStaticFiles();
 
-            app.UseRouting();
+          //app.UseRouting();
 
             app.UseAuthorization();
 

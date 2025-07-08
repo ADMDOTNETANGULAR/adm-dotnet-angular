@@ -5,6 +5,7 @@ namespace HandsOnMVCUsingModels.Controllers
 {
     public class DemoController : Controller
     {
+        [Route("GetAllBooks")]
         public IActionResult Index()
         {
             var books = new List<Book>
