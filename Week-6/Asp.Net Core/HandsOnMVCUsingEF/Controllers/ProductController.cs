@@ -8,9 +8,13 @@ namespace HandsOnMVCUsingEF.Controllers
     public class ProductController : Controller
     {
         private readonly IProductContract _productRepository;
-        public ProductController()
+        //public ProductController()
+        //{
+        //    _productRepository = new ProductRepository();
+        //}
+        public ProductController(IProductContract productRepository)
         {
-            _productRepository = new ProductRepository();
+            _productRepository = productRepository;
         }
         public IActionResult Index()
         {

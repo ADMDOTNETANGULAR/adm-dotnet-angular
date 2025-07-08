@@ -4,13 +4,23 @@ namespace HandsOnMVCUsingEF.DBContext
 {
     public class OnlineShopContext:DbContext
     {
+        private IConfiguration _configuration;
+        //public OnlineShopContext(IConfiguration configuration)
+        //{
+        //    _configuration = configuration;
+        //}
+        public OnlineShopContext(DbContextOptions<OnlineShopContext> options)
+            : base(options)
+        {
+        }
         //Define the DbSet for Product
         public DbSet<Product> Products { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            //Connection string to connect to the database
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-4O1D65I\SQLEXPRESS;Initial Catalog=OnlineShopDB;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    //Connection string to connect to the database
+        //    //optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-4O1D65I\SQLEXPRESS;Initial Catalog=OnlineShopDB;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
+        //    optionsBuilder.UseSqlServer(_configuration.GetConnectionString("OnlineShopDBConnection"));
+        //}
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //seeding initial data into the Products table

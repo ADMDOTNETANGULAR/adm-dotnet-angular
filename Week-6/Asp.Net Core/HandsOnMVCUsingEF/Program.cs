@@ -1,3 +1,7 @@
+using HandsOnMVCUsingEF.DBContext;
+using HandsOnMVCUsingEF.Repositories;
+using Microsoft.EntityFrameworkCore;
+
 namespace HandsOnMVCUsingEF
 {
     public class Program
@@ -8,6 +12,9 @@ namespace HandsOnMVCUsingEF
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            var connectionString = builder.Configuration.GetConnectionString("OnlineShopDBConnection");
+            builder.Services.AddDbContext<OnlineShopContext>(options=>options.UseSqlServer(connectionString));
+            builder.Services.AddScoped<IProductContract, ProductRepository>();
 
             var app = builder.Build();
 
@@ -16,7 +23,7 @@ namespace HandsOnMVCUsingEF
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-            app.UseStaticFiles();
+           app.UseStaticFiles();
 
             app.UseRouting();
 
@@ -26,7 +33,7 @@ namespace HandsOnMVCUsingEF
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
-            app.Run();
+           app.Run();
         }
     }
 }

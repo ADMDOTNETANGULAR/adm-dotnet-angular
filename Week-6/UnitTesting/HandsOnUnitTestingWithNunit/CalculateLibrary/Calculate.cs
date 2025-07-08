@@ -2,6 +2,11 @@
 {
     public class Calculate
     {
+        public int Count { get; set; }
+        public void IncrementCount()
+        {
+            Count++;
+        }
         public int Add(int a,int b)
         {
             return a + b;

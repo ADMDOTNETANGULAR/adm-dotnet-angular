@@ -6,9 +6,13 @@ namespace HandsOnMVCUsingEF.Repositories
     public class ProductRepository : IProductContract
     {
         private readonly OnlineShopContext _context;
-        public ProductRepository()
+        //public ProductRepository()
+        //{
+        //    _context = new OnlineShopContext();
+        //}
+        public ProductRepository(OnlineShopContext context)
         {
-            _context = new OnlineShopContext();
+            _context = context;
         }
         public async Task<List<Product>> GetAllProductsAsync()
         {

@@ -7,9 +7,13 @@ namespace HandsOnMVCUsingEF.Controllers
     public class DemoController : Controller
     {
         private readonly OnlineShopContext _context;
-        public DemoController()
+        //public DemoController()
+        //{
+        //    _context = new OnlineShopContext();
+        //}
+        public DemoController(OnlineShopContext context)
         {
-            _context = new OnlineShopContext();
+            _context = context;
         }
         public IActionResult Index() //Get All Products
         {
