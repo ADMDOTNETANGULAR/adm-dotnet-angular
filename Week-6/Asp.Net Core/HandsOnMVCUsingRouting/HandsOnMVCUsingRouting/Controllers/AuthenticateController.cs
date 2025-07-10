@@ -22,9 +22,10 @@ namespace HandsOnMVCUsingRouting.Controllers
         {
             // Logic for logging out the user
             // For example, clearing session or authentication cookies
-           // return RedirectToAction("Index", "Home"); // Redirect to home page after logout
+           return RedirectToAction("Index", "Home"); // Redirect to home page after logout
             //redirect to the route
-            return Redirect("/auth/Login");
+           return Redirect("/auth/Login");
+            //return RedirectToAction("Login");
         }
         [Route("Register")]
         public IActionResult Register()
