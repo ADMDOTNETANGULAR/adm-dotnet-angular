@@ -66,8 +66,8 @@ namespace HandsOnAPIUsingModels.Controllers
                 return NotFound("Product not found and Give id is not valid"); // Return 404 if product does not exist
             }
             _productRepository.DeleteProduct(id);
-            //return NoContent(); // Return 204 No Content on successful deletion
-            return Ok(new JsonResult("Product deleted successfully")); // Return 200 OK with success message
+            return NoContent(); // Return 204 No Content on successful deletion
+            //return Ok(new JsonResult("Product deleted successfully")); // Return 200 OK with success message
         }
     }
 }
