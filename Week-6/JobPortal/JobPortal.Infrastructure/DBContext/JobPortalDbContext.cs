@@ -11,6 +11,7 @@ namespace JobPortal.Infrastructure.DBContext
     {
         //define the DbSet properties for your entities
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<User> Users { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //configure the database connection string
