@@ -39,8 +39,12 @@ namespace HandsOnAPIUsingEFCore
             app.UseAuthorization();
 
 
-            app.MapControllers();
+            app.MapControllers(); // This maps the controller routes to the application
 
+            //app.MapControllerRoute(
+            //    name: "default",
+            //    pattern: "{controller=Flight}/{action=GetAllFlights}/{id?}"
+            //);
             app.Run();
         }
     }
