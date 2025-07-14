@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<h1>Name @ViewBag.Name</h1>
+<h1>Age @ViewBag.Age</h1>
+<h1>PI @ViewBag.PI</h1>
+@foreach (var item in ViewBag.List)
+{
+    <h2>@item</h2>
+}

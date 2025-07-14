@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using HandsOnAPIUsingEFCore.Repositories;
 using HandsOnAPIUsingEFCore.Models;
+using HandsOnAPIUsingEFCore.DTOS;
 namespace HandsOnAPIUsingEFCore.Controllers
 {
     [Route("api/[controller]")]
@@ -49,13 +50,20 @@ namespace HandsOnAPIUsingEFCore.Controllers
 
         // POST: api/Flight
         [HttpPost("AddFlight")]
-        public async Task<IActionResult> AddFlight([FromBody] Flight flight)
+        public async Task<IActionResult> AddFlight([FromBody] FlightDTO flight)
         {
+            //convert DTO to Model
+            var flightModel = new Flight
+            {
+                FlightName = flight.FlightName,
+                FightCode = flight.FightCode,
+                Seats = flight.Seats
+            };
             if (flight == null)
             {
                 return BadRequest("Flight data is null"); // Return 400 Bad Request if the flight data is null
             }
-            await _flightRepository.AddFlightAsync(flight);
+            await _flightRepository.AddFlightAsync(flightModel);
             return Ok(flight); // Return 200 OK with the added flight details in JSON format
         }
         // PUT: api/Flight/5
