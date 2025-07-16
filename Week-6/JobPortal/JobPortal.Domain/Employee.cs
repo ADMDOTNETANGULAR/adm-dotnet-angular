@@ -20,5 +20,8 @@ namespace JobPortal.Domain
         [Column(TypeName = "varchar")]
         [StringLength(50)]
         public string Organization { get; set; }
+        public string UserId { get; set; } // Foreign key to User
+        [ForeignKey("UserId")]
+        public User User { get; set; } // Navigation property to User
     }
 }

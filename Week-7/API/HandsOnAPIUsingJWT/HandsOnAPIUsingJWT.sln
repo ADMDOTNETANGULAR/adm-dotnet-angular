@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36301.6 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandsOnAPIUsingJWT", "HandsOnAPIUsingJWT.csproj", "{E42AB8D7-ADC5-4792-A2CB-92A932D2C9E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E42AB8D7-ADC5-4792-A2CB-92A932D2C9E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E42AB8D7-ADC5-4792-A2CB-92A932D2C9E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E42AB8D7-ADC5-4792-A2CB-92A932D2C9E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E42AB8D7-ADC5-4792-A2CB-92A932D2C9E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3671A01B-7E50-4358-BEDF-B63C9452B9C8}
+	EndGlobalSection
+EndGlobal
