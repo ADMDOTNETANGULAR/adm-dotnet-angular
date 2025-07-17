@@ -1,0 +1,6 @@
+@HandsOnAPIWithDIUsingServiceLifetime_HostAddress = http://localhost:5007
+
+GET {{HandsOnAPIWithDIUsingServiceLifetime_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
