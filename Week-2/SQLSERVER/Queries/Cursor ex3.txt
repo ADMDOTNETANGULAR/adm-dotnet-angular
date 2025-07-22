@@ -1,0 +1,25 @@
+declare @desig varchar(30)
+declare @empid varchar(30)
+declare db_cursor1 cursor for
+select desig,empid from Employee 
+open db_cursor1
+fetch next from db_cursor1 into @desig,@empid
+while @@FETCH_STATUS<>-1
+begin
+if(@desig='TL')
+begin 
+update Employee set Sal=Sal+10000 where Desig=@desig and EmpId=@empid 
+end
+if(@desig='PM')
+begin
+update Employee set Sal=Sal+15000 where Desig=@desig and EmpId=@empid 
+end
+if(@desig='Developer')
+begin
+update Employee set Sal=Sal+8000 where Desig=@desig and EmpId=@empid 
+end
+fetch next from db_cursor1 into @desig,@empid
+end
+close db_cursor1
+deallocate db_cursor1
+select desig from Employee 

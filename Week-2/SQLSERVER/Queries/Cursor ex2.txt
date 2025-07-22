@@ -1,0 +1,29 @@
+create table employee(empid varchar(20),empname varchar(30),desig varchar(20),sal int,bonous int)
+insert into employee(empid,empname,desig,sal) select 'e0001','David','programmer',12000
+union select 'e0002','John','programmer',20000
+union select 'e0003','peter','Teamleader',50000
+union select 'e0004','Mike','Manager',70000
+union select 'e0005','Robert','Teamleader',55000 
+
+select * from employee
+
+declare @sal int
+declare @desig varchar(30)
+declare @bonous int
+declare @empid varchar(30)
+declare c1 cursor read_only for
+select empid,desig,sal from employee
+open c1
+fetch next from c1 into @empid,@desig,@sal
+while @@fetch_status=0
+begin
+select @bonous=case @desig
+when 'programmer' then  @sal*0.2
+when 'Teamleader' then @sal*0.3
+when 'Manager' then @sal*0.4
+end
+update employee set bonous=@bonous where empid=@empid
+fetch next from c1 into @empid,@desig,@sal
+end
+close c1
+deallocate c1
