@@ -19,7 +19,7 @@ namespace HandsOnAPIUsingEFCore.Repositories
         public async Task AddFlightAsync(Flight flight)
         {
           _context.Flights.Add(flight);
-            await _context.SaveChangesAsync();
+           // await _context.SaveChangesAsync();
         }
 
         public async Task DeleteFlightAsync(int id)
