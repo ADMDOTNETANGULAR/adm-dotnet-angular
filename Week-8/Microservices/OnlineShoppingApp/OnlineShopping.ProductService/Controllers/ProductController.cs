@@ -19,14 +19,14 @@ namespace OnlineShopping.ProductService.Controllers
         }
         //End Points
         [HttpGet("GetAllProducts")]
-       //[Authorize] // This will allow both Admin,User and any other roles to access this endpoint
+       [Authorize] // This will allow both Admin,User and any other roles to access this endpoint
         public async Task<IActionResult> GetAllProducts()
         {
             var products = await productRepository.GetAllProductsAsync();
             return Ok(products);
         }
         [HttpGet("GetProductById/{id}")]
-      // [Authorize(Roles = "Admin,User")] // This will allow both Admin and User roles to access this endpoint
+      [Authorize(Roles = "Admin,User")] // This will allow both Admin and User roles to access this endpoint
         public async Task<IActionResult> GetProductById(int id)
         {
             var product = await productRepository.GetProductByIdAsync(id);
@@ -36,8 +36,9 @@ namespace OnlineShopping.ProductService.Controllers
             }
             return Ok(product);
         }
+
         [HttpPost("AddProduct")]
-       // [Authorize(Roles = "Admin")] // This will allow only Admin role to access this endpoint
+       [Authorize(Roles = "Admin")] // This will allow only Admin role to access this endpoint
         public async Task<IActionResult> AddProduct([FromBody] Product product)
         {
             if (product == null)
@@ -47,8 +48,9 @@ namespace OnlineShopping.ProductService.Controllers
             await productRepository.AddProductAsync(product);
             return Ok(product);
         }
+
         [HttpPut("UpdateProduct")]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> UpdateProduct([FromBody] Product product)
         {
             if (product == null)
@@ -63,8 +65,9 @@ namespace OnlineShopping.ProductService.Controllers
             await productRepository.UpdateProductAsync(product);
             return NoContent();
         }
+
         [HttpDelete("DeleteProduct/{id}")]
-       // [Authorize(Roles = "Admin")]
+       [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteProduct(int id)
         {
             var existingProduct = await productRepository.GetProductByIdAsync(id);

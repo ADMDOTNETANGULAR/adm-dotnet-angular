@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OnlineShopping.OrderService.Entities;
 using OnlineShopping.OrderService.Repositories;
@@ -15,12 +16,14 @@ namespace OnlineShopping.OrderService.Controllers
             _orderRepository = orderRepository;
         }
         [HttpGet("GetAllOrders")]
+        [Authorize(Roles = "Admin")] // This will allow both Admin and User roles to access this endpoint
         public async Task<IActionResult> GetAllOrders()
         {
             var orders = await _orderRepository.GetAllOrdersAsync();
             return Ok(orders);
         }
         [HttpGet("GetOrderById/{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetOrderById(int id)
         {
             var order = await _orderRepository.GetOrderByIdAsync(id);
@@ -31,6 +34,7 @@ namespace OnlineShopping.OrderService.Controllers
             return Ok(order);
         }
         [HttpPost("AddOrder")]
+        [Authorize(Roles = "User")]
         public async Task<IActionResult> AddOrder([FromBody] Order order)
         {
             if (order == null)
@@ -41,6 +45,7 @@ namespace OnlineShopping.OrderService.Controllers
             return CreatedAtAction(nameof(GetOrderById), new { id = order.OrderId }, order);
         }
         [HttpPut("UpdateOrder")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> UpdateOrder([FromBody] Order order)
         {
             if (order == null)
@@ -51,6 +56,7 @@ namespace OnlineShopping.OrderService.Controllers
             return NoContent();
         }
         [HttpDelete("DeleteOrder/{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteOrder(int id)
         {
             try

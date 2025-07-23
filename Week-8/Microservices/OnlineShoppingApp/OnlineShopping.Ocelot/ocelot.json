@@ -36,6 +36,7 @@
 			"UpstreamPathTemplate": "/onlineshop/orders/{everything}",
 			"UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
 		},
+
 		{
 			"DownstreamPathTemplate": "/",
 			"DownstreamScheme": "http",
