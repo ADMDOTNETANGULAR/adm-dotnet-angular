@@ -8,7 +8,10 @@ namespace HandsOnLogging_Demo1.Controllers
     public class HomeController : ControllerBase
     {
         private readonly ILogger<HomeController> _logger;
-
+        /// <summary>
+        /// ILogger<HomeController> is injected into the constructor to enable logging capabilities.
+        /// </summary>
+        /// <param name="logger"></param>
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -25,7 +28,7 @@ namespace HandsOnLogging_Demo1.Controllers
             {
 
                 _logger.LogError("Log Error: " + ex.Message);
-               // return BadRequest(ex.Message);
+               return BadRequest(ex.Message);
             }
         }
         [HttpPost]
