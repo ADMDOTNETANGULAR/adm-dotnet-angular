@@ -28,8 +28,26 @@ namespace HandsOnAPIUsingEFCore.Controllers
             return Ok(flights); // Return 200 OK with the list of flights in JSON format
         }
         // GET: api/Flight/5
-        [HttpGet("GetFlightById/{id}")]
-        public async Task<IActionResult> GetFlightById([FromRoute] int id)
+        //[HttpGet("GetFlightById")]
+        //public async Task<IActionResult> GetFlightById([FromQuery] int id)
+        //{
+        //    try
+        //    {
+        //        var flight = await _flightRepository.GetFlightByIdAsync(id);
+        //        if (flight == null)
+        //        {
+        //            return NotFound("Invalid Flight Code"); // Return 404 Not Found if the flight does not exist
+        //        }
+        //        return Ok(flight); // Return 200 OK with the flight details in JSON format
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        //501 is the status code
+        //        return StatusCode(501, ex.Message);//
+        //    }
+        //}
+        [HttpGet("GetFlightById")]
+        public async Task<IActionResult> GetFlightById([FromHeader] int id)
         {
             try
             {
@@ -64,7 +82,7 @@ namespace HandsOnAPIUsingEFCore.Controllers
                 return BadRequest("Flight data is null"); // Return 400 Bad Request if the flight data is null
             }
             await _flightRepository.AddFlightAsync(flightModel);
-            return Ok(flight); // Return 200 OK with the added flight details in JSON format
+            return Ok(flightModel); // Return 200 OK with the added flight details in JSON format
         }
         // PUT: api/Flight/5
         [HttpPut("UpdateFlight")]

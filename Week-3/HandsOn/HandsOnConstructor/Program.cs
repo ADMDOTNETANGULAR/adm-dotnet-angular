@@ -13,6 +13,7 @@
         static void Main(string[] args)
         {
             Sample obj = new Sample();
+            
         }
     }
 }

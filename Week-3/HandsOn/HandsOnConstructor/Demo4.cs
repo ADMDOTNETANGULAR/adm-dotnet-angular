@@ -31,6 +31,7 @@ namespace HandsOnConstructor
             Console.WriteLine("Circle objects created successfully.");
             Console.WriteLine("Area of c1: " + c1.Area()); // Outputs: Area of c1: 78.5
             Console.WriteLine("Area of c2: " + c2.Area()); // Outputs: Area of c2: 314.0
+            Console.ReadKey();
         }
     }
 }
