@@ -7,7 +7,7 @@
         {
             //write your code here
             Console.WriteLine("Hello, World!");
-            Console.ReadKey(); // Wait for user input before closing the console window
+           // Console.ReadKey(); // Wait for user input before closing the console window
         }
     }
 }
