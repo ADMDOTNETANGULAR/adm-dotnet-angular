@@ -1,0 +1,25 @@
+TypeScript-Assignments
+======================
+1.For an Online Bookstore create a class to store book details and display the  book details with fields isbn,bookname,booktitle,bookauthor,quantityofbooks,bookprice.calculate and display the bill amount
+[Note: Use Suitable Methods]
+
+2.Create a class called shapes Overload the Area method that has to calculate the area of rectangle, triangle, circle, and square by passing the relevant parameters.
+3.Write a class Define a class to represent a bank account. Include the following members:
+	Data Members:
+		Name of the Depositor
+		Account Number
+		Type of Account
+		Balance amount in the account
+	Data Methods:
+		To assign initial values
+		To deposit an amount
+		To withdraw an amount after checking the balance
+		To display name and balance.
+
+4. Create a class called Student with the following details:
+		RollNo
+		StudName
+		MarksInEng
+		MarksInMaths
+		MarksInScience
+   Display the total marks and Percentage of the student.
