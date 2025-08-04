@@ -1,0 +1,28 @@
+<!-- <div>
+    <p>Product details</p>
+    <p>ID: {{item.id}}</p>
+    <p>Name: {{item.name}}</p>
+    <p>Price: {{item.price}}</p>
+    <p>Description: {{item.description}}</p>
+</div> -->
+<hr>
+<div *ngIf="item">
+
+    <p>ID: {{item?.id}}</p>
+    <p>Name: {{item?.name}}</p>
+    <p>Price: {{item?.price}}</p>
+    <p>Description: {{item?.description}}</p>
+</div>
+<div *ngIf="!item">
+    <p>No product selected</p>
+</div>
+<hr>
+@if (item) {
+<p>ID: {{item.id}}</p>
+<p>Name: {{item.name}}</p>
+<p>Price: {{item.price}}</p>
+<p>Description: {{item.description}}</p>
+}
+@else {
+<p>No product selected</p>
+}

@@ -1,0 +1,22 @@
+<div>
+    <p>Movie Details</p>
+    <table border="1" class="table table-striped table-bordered">
+        <tbody>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Director</th>
+                <th>Release Year</th>
+            </tr>
+        </tbody>
+        @for(movie of movies; track movie.id) {
+        <tr>
+            <td>{{movie.id}}</td>
+            <td>{{ movie.title }}</td>
+            <td>{{ movie.director }}</td>
+            <td>{{ movie.releaseYear }}</td>
+        </tr>
+        }
+
+    </table>
+</div>

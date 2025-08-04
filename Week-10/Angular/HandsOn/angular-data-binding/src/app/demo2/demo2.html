@@ -1,0 +1,25 @@
+<div>
+    <h1>City List</h1>
+    <ul>
+        <li *ngFor="let city of cities">{{ city }}</li>
+    </ul>
+</div>
+<hr>
+<div>
+    <table border="1">
+        <tr>
+            <th>City</th>
+        </tr>
+        <tr *ngFor="let item of cities">
+            <td>{{ item }}</td>
+        </tr>
+    </table>
+</div>
+<hr>
+<div>
+    <select>
+        <option *ngFor="let city of cities" value="{{city}}">{{ city }}</option>
+    </select>
+</div>
+<hr>
+<h1>My City:{{cities[0]}}</h1>
