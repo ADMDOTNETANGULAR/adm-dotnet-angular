@@ -11,7 +11,7 @@ namespace HandsOnAPIUsingEFCore.Models
         public string FlightName { get; set; }
         [Required]
         [StringLength(50)]
-        public string FightCode { get; set; }
+        public string FlightCode { get; set; }
         [Required]
        
         public int Seats { get; set; }

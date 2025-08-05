@@ -1,0 +1,41 @@
+<div class="container">
+    <table border="1">
+
+        <tr>
+            <td>Title</td>
+            <td><input type="text" [(ngModel)]="book.title"></td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td><input type="number" [(ngModel)]="book.price"></td>
+        </tr>
+        <tr>
+            <td>author</td>
+            <td><select [(ngModel)]="book.author">
+                    <option *ngFor="let author of authors" value="{{author}}">{{ author }}</option>
+                </select></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button (click)="SaveBook()">Add Book</button></td>
+        </tr>
+    </table>
+    <hr>
+    <table border="1" class="table table-bordered" *ngIf="books.length > 0">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Author</th>
+            </tr>
+        <tbody>
+            <tr *ngFor="let book of books">
+                <td>{{ book.id }}</td>
+                <td>{{ book.title }}</td>
+                <td>{{ book.price }}</td>
+                <td>{{ book.author }}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

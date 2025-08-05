@@ -20,14 +20,14 @@ namespace HandsOnAPIUsingEFCore.DataContext
                 {
                     FlightId = 1,
                     FlightName = "Flight 101",
-                    FightCode = "FL101",
+                    FlightCode = "FL101",
                     Seats = 150,
                 },
                 new Models.Flight
                 {
                     FlightId = 2,
                     FlightName = "Flight 202",
-                    FightCode = "FL202",
+                    FlightCode = "FL202",
                     Seats = 200,
                 }
             );

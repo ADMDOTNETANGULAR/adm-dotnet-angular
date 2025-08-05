@@ -74,7 +74,7 @@ namespace HandsOnAPIUsingEFCore.Controllers
             var flightModel = new Flight
             {
                 FlightName = flight.FlightName,
-                FightCode = flight.FightCode,
+                FlightCode = flight.FlightCode,
                 Seats = flight.Seats
             };
             if (flight == null)

@@ -1,0 +1,30 @@
+<div>
+    <table border="1">
+        <tr>
+            <td>Id</td>
+            <td><input type="number" [(ngModel)]="id"></td>
+        </tr>
+        <tr>
+            <td>Title</td>
+            <td><input type="text" [(ngModel)]="name"></td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td><input type="number" [(ngModel)]="price"></td>
+        </tr>
+        <tr>
+            <td>autor</td>
+            <td><input type="text" [(ngModel)]="author"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button (click)="SaveBook()">Add Book</button></td>
+
+        </tr>
+    </table>
+    <hr>
+    <h1>Book Details</h1>
+    <p>Id: {{book?.id}}</p>
+    <p>Title: {{book?.title}}</p>
+    <p>Price: {{book?.price}}</p>
+    <p>Author: {{book?.author}}</p>
+</div>

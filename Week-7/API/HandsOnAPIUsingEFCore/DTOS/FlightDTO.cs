@@ -6,7 +6,7 @@ namespace HandsOnAPIUsingEFCore.DTOS
     {
         public string FlightName { get; set; }
         
-        public string FightCode { get; set; }
+        public string FlightCode { get; set; }
       
 
         public int Seats { get; set; }

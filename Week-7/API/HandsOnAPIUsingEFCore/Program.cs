@@ -24,6 +24,14 @@ namespace HandsOnAPIUsingEFCore
             // AddTransient means a new instance is created each time it is requested
             //builder.Services.AddTransient<IFlightContract, FlightRepository>();
             builder.Services.AddControllers();
+            //add cors policy
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigins",
+                    builder => builder.AllowAnyOrigin()
+                                      .AllowAnyMethod()
+                                      .AllowAnyHeader());
+            });
             //Ensure that the XML serialization is used instead of JSON serialization
             //builder.Services.AddControllers(
             //    options => options.OutputFormatters.RemoveType<Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter>()
@@ -47,6 +55,8 @@ namespace HandsOnAPIUsingEFCore
                 app.UseSwaggerUI();
 
             }
+            // Use CORS policy
+            app.UseCors("AllowAllOrigins");
             app.UseAuthorization();
 
 
