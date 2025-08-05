@@ -1,0 +1,20 @@
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>FlightId</th>
+                <th>FlightName</th>
+                <th>FlightCode</th>
+                <th>Seats</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let flight of flights">
+                <td>{{ flight.flightId }}</td>
+                <td>{{ flight.flightName }}</td>
+                <td>{{ flight.flightCode }}</td>
+                <td>{{ flight.seats }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

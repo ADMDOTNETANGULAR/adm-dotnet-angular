@@ -1,0 +1,28 @@
+<div class="container">
+    <table class="table-responsive">
+        <tr>
+            <td>FlightName</td>
+            <td>
+                <input type="text" [(ngModel)]="flight.flightName" />
+            </td>
+        </tr>
+        <tr>
+            <td>FlightCode</td>
+            <td>
+                <input type="text" [(ngModel)]="flight.flightCode" />
+            </td>
+        </tr>
+        <tr>
+            <td>Seats</td>
+            <td>
+                <input type="number" [(ngModel)]="flight.seats" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)="addFlight()">Submit</button>
+
+            </td>
+        </tr>
+    </table>
+</div>
