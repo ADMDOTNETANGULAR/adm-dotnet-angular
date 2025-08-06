@@ -1,0 +1,37 @@
+<div class="container">
+    <table class="table-responsive">
+        <tr>
+            <td>FlightId</td>
+            <td>
+                <input type="text" [(ngModel)]="flight.flightId" />
+                <button (click)="serachFlight(flight.flightId)">Search</button>
+            </td>
+        </tr>
+        <tr>
+            <td>FlightName</td>
+            <td>
+                <input type="text" [(ngModel)]="flight.flightName" readonly />
+
+            </td>
+        </tr>
+        <tr>
+            <td>FlightCode</td>
+            <td>
+                <input type="text" [(ngModel)]="flight.flightCode" readonly />
+            </td>
+        </tr>
+        <tr>
+            <td>Seats</td>
+            <td>
+                <input type="number" [(ngModel)]="flight.seats" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)="editFlight()">Edit</button>
+                <button (click)="deletFlight(flight.flightId)">Delete</button>
+
+            </td>
+        </tr>
+    </table>
+</div>

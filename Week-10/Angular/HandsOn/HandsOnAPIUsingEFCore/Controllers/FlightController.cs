@@ -46,8 +46,8 @@ namespace HandsOnAPIUsingEFCore.Controllers
         //        return StatusCode(501, ex.Message);//
         //    }
         //}
-        [HttpGet("GetFlightById")]
-        public async Task<IActionResult> GetFlightById([FromHeader] int id)
+        [HttpGet("GetFlightById/{id}")]
+        public async Task<IActionResult> GetFlightById([FromRoute]int id)
         {
             try
             {

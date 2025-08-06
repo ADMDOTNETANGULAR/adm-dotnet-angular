@@ -14,6 +14,9 @@
                 <td>{{ flight.flightName }}</td>
                 <td>{{ flight.flightCode }}</td>
                 <td>{{ flight.seats }}</td>
+                <td>
+                    <button (click)="deleteFlight(flight.flightId)">Delete</button>
+                </td>
             </tr>
         </tbody>
     </table>
