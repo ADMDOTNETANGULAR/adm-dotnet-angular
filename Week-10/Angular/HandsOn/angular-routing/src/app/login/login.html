@@ -1,0 +1,26 @@
+<div class="container">
+    <table class="table">
+        <tr>
+            <td>Username</td>
+            <td>
+                <input type="text" [(ngModel)]="username">
+            </td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>
+                <input type="password" [(ngModel)]="password">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <span>{{errorMessage}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)="validate()" class="btn">Login</button>
+            </td>
+        </tr>
+    </table>
+</div>
