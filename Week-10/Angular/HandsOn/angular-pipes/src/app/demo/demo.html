@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>{{title}}</h1>
+    <pre>
+        titile:{{title}}
+        title:{{ title | uppercase }}
+        title:{{ title | lowercase }}
+        price:{{ price | currency:'INR' }}
+        price:{{ price | currency:'USD' }}
+        price:{{ price | currency:'EUR' }}
+           bookingDate:{{ bookingDate}}
+        bookingDate:{{ bookingDate | date }}
+        bookingDate:{{ bookingDate | date:'fullDate' }}
+        bookingDate:{{ bookingDate | date:'shortDate' }}
+        bookingDate:{{ bookingDate | date:"dd/MM/yy" }}
+        {{ obj | json }}
+    </pre>
+</div>

@@ -1,0 +1,28 @@
+<!-- Page Layout -->
+<div class="container-fluid mt-3">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3 col-lg-2 bg-light p-3 border-end">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/admin-dashboard/view-products">ViewAll</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/admin-dashboard/view-products">AddProduct</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/admin-dashboard/view-products">EditProduct</a>
+                </li>
+                <li class="nav-item">
+                    <!-- <a class="nav-link" routerLink="/login">LogOut</a> -->
+                    <button class="nav-link" (click)="LogOut()">LogOut</button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-9 col-lg-10 p-4">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

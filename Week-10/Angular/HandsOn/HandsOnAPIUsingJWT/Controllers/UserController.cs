@@ -43,21 +43,21 @@ namespace HandsOnAPIUsingJWT.Controllers
                 return BadRequest("Email and Password are required");
             }
             var validatedUser = await userRepository.Validate(login.Email, login.Password);
-            if (validatedUser == null)
+            UserResponseDTO response = null;
+            if (validatedUser != null)
             {
-                return Ok(null);
-            }
-            else
-            {
+                
+            
                 // Here you can generate a JWT token and return it in the response
-                var response = new UserResponseDTO()
+                response = new UserResponseDTO()
                 {
                     UserId = validatedUser.UserId,
                     Role = validatedUser.Role,
                     Token = GetToken(validatedUser) // Replace with actual JWT token generation logic
                 };
-                return Ok(response);
+                
             }
+            return Ok(response);
 
         }
         private string GetToken(User? user)
