@@ -1,0 +1,23 @@
+<p>demo1 works!</p>
+<p>{{message}}</p>
+<div>
+    <table border="1">
+        <thead>
+            <th>FlightId</th>
+            <th>FlightName</th>
+            <th>FlightCode</th>
+            <th>Seats</th>
+        </thead>
+        <tbody>
+            @for (flight of flights; track flight.flightId) {
+            <tr>
+                <td>{{ flight.flightId }}</td>
+                <td>{{ flight.flightName }}</td>
+                <td>{{ flight.flightCode }}</td>
+                <td>{{ flight.seats }}</td>
+            </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
