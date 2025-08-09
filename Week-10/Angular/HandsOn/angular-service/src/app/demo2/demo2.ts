@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Greet } from '../greet';
+import { FligtService } from '../fligt-service';
 @Component({
   selector: 'app-demo2',
   imports: [],
@@ -7,7 +8,12 @@ import { Greet } from '../greet';
   styleUrl: './demo2.css'
 })
 export class Demo2 {
-  constructor(private greetService: Greet) {
+  flights: any; //declare a variable to hold the flight data
+  constructor(private greetService: Greet, private flightService: FligtService) {
     console.log(this.greetService.Hello())
+    this.flightService.getallFlights()
+      .subscribe((data: any) => {
+        this.flights = data
+      }); //call the getFlights method to get the flight data
   }
 }
