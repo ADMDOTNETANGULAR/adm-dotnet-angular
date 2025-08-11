@@ -1,0 +1,9 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/20952f95-de11-461d-8eba-46552673a16a/resourceGroups/my-rg/providers/Microsoft.Web/sites/angularapp810",
+    "appService.deploySubpath": "dist\\angular-auth-guard",
+    "appService.showBuildDuringDeployPrompt": false
+}
