@@ -1,0 +1,6 @@
+@HandsOnFileUploadtoBlobStorage_Demo1_HostAddress = http://localhost:5199
+
+GET {{HandsOnFileUploadtoBlobStorage_Demo1_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

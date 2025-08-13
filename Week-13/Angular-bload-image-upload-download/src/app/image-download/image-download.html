@@ -1,0 +1,18 @@
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let image of imageUrls">
+                <td>{{ image.id }}</td>
+                <td>
+                    <img [src]="image.imageUrl" alt="Image" class="img-fluid" width="80px" height="80px" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

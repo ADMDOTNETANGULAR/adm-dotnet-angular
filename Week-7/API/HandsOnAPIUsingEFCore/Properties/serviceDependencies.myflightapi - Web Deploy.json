@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('serviceConnectorResourceGroupName')]/providers/Microsoft.Web/sites/myflightapi/providers/Microsoft.ServiceLinker/linkers/ConnectionStringsFlightDBConnection1_5C29ED3989",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/myserver812/databases/FlightDb",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:FlightDBConnection1",
+      "dynamicId": null
+    }
+  }
+}

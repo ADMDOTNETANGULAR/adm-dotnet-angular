@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:FlightDBConnection1",
+      "dynamicId": null
+    }
+  }
+}

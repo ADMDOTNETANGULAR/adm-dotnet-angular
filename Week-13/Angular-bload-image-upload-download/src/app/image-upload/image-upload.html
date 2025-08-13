@@ -1,0 +1,9 @@
+<div>
+    <input type="file" (change)="onFileSelected($event)">
+    <button (click)="onUpload()">Upload</button>
+
+    <div *ngIf="uploadResponse">
+        <p>Image URL: {{ uploadResponse?.blob?.uri }}</p>
+        <img *ngIf="uploadResponse?.blob?.uri" [src]="uploadResponse.blob.uri" alt="Uploaded Image" width="200">
+    </div>
+</div>
